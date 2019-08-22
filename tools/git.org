@@ -1,0 +1,55 @@
+#+STARTUP: indent
+Git note
+* new
+* git
+** push without username and password
+- https://medium.com/@amanze.ogbonna/accessing-pushing-to-github-without-username-and-password-3022feb077fb
+** 1
+- some basic commands
+- git clone <address> <where to clone>
+- git init
+- git add -A/git add <filename>
+- git commit -m "<commit>"
+- git reset
+- git branch <branchname>, git checkout <branchname>
+- git checkout -b <branchname> #create a branch and check it out
+- git push -u <address> <branchname>
+- git clone <address>
+- git --version
+- git config --global user.name "<name>"
+- git config --global user.email "<email>"
+- git config --list
+- git help config
+- git branch --merged #tell us the branch we've merged
+- git merge <branchname>
+- git diff
+- git log
+- git branch -d <branchname>
+
+- git remote add origin https://github.com/catketchup/astro-python.git
+- git push -u origin master
+- git pull origin <branchname of remote>
+  
+** 2
+- git branch -m <newname> #if you are on the branch you want to rename
+- git branch -m <oldname> <newname> #if you are on a different branch
+** 3
+- add and commit as long as the file is changed
+- check branch you are in everytime
+- add and commit befor
+** reset and revert
+- https://blog.csdn.net/yxlshk/article/details/79944535
+- git log
+- git reset --hard [version number]
+- git push -f -u origin master
+** remote
+- git remote add origin <address>
+- git push -u origin master
+- git config --get remote.origin.url: show the remote URL
+- git remote -v: show remote origin
+- git remote show origin: show the full output or referential integrity
+- git remote set-url origin <address>: change a remote's URL(https://help.github.com/en/articles/changing-a-remotes-url)
+- 
+** github
+
+# hi

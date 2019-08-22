@@ -1,0 +1,366 @@
+#+STARTUP: indent
+Linux note
+* new
+** 08/2019
+- encrypt using encfs;
+* linux1
+** remove apt
+- dpkg --list
+- sudo apt-get remove "package-name"
+** permissions
+- http://linuxcommand.org/lc3_lts0090.php
+- https://www.cnblogs.com/webnote/p/5734714.html
+- https://www.pluralsight.com/blog/it-ops/linux-file-permissions
+
+** ssh, public key and private key
+- ~/.ssh is where the keys can be found
+- need to use the ssh
+** hardware details
+- uname
+- sudo lshw
+- lscpu
+- lsblk
+- lsusb
+- https://vitux.com/get-linux-system-and-hardware-details-on-the-command-line/
+- monitor: https://askubuntu.com/questions/371261/display-monitor-info-via-command-line
+- output: xrandr
+** password-protect folders and files
+- https://www.maketecheasier.com/password-protect-folders-files-linux/(chown and chmod)
+- 
+
+** ps(process status) and grep
+- docs: http://www.linfo.org/ps.html
+- ps(process status)
+- ps aux | grep emacs
+- ps aux
+- z lensing
+- grep -R cosmology (R is for recursive, means global)
+- cat setup.py
+- cat setup.py | grep lens
+- ps aux | grep emacs | awk '{print $2}' | xarg -I {} kill -9 {}
+- grep -R ^lens.*95$
+- grep -R .*lens.*95$
+- cat ~/.bashrc | grep [keyword]
+** xdg
+*** xdg-settings (get various settings from the desktop environment)
+- https://www.mankier.com/1/xdg-settings
+*** xdg-mime (command line tool for querying information about file type handling and adding descriptions for new file types)
+- https://www.mankier.com/1/xdg-mime
+- xdg-mime default pcmanfm.desktop inode/directtory (set the default file manager to be pcmanfm.desktop)
+- xdg-mime query default image/png 
+*** xdg-open (open a file or URL in the user's preferred application)
+- https://www.mankier.com/1/xdg-open
+- xdg-open [directory] (the default file manager)
+* linux2
+** Keyboard Shortcuts
+https://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell-for-ubuntu-debian-suse-redhat-linux-etc/
+
+- Working With Processes
+  c-d: close the bash shell
+
+- Controling the Screen
+  c-l: clear the screen
+  c-s: stop all output to the screen
+  c-q: resume output
+
+- Moving the Cursor:
+  c-xx: Move between the begining of the line and the current position of the cursor
+
+- Deleting Text:
+  c-d: delete the character under the cursor
+  m-d: delete all character after the cursor on the screen line
+  c-h: delete the character before the cursor
+
+- Cutting and Pasting
+  c-w: cut the word before the cursor, adding it to the clipboard
+  c-k: cut the part of the line after the cursor, adding it the clipboard
+  c-u: cut the part of the line before the cursor, adding it to the clipboard
+  c-y: paste the last thing you cut from the clipboard. The y here stands for “yank”
+
+- Capitalizing Characters
+  m-u: capitalize every character from the cursor to the end of the current word, converting the characters to upper case.
+  m-l: uncapitalize every character from the cursor to the end of the current word, converting the characters to lower case
+  m-c: capitalize the character under the cursor. Your cursor will move to the end of the current word
+** File Adminstration
+- ls [option(s)] [file(s)]
+     -l Detailed list
+     -a Displays hidden files
+     -G* list of files starts with G
+- cp [option(s)] sourcefile targetfile: Copies sourcefile to targetfile.
+     -i Waits for confirmation, if necessary, before an existing targetfile is overwritten
+     -r Copies recursively (includes subdirectories)
+- scp
+- mv [option(s)] sourcefile targetfile: Copies sourcefile to targetfile then deletes the original sourcefile.
+     -b Creates a backup copy of the sourcefile before moving
+     -i Waits for confirmation, if necessary, before an existing targetfile is overwritten
+
+- mv targetfile targetdirectory
+
+- rm [option(s)] file(s): Removes the specified files from the file system. Directories are not removed by rm unless the option -r is used.
+     -r Deletes any existing subdirectories
+     -i Waits for confirmation before deleting each file
+     -f Without confirmation
+
+- ln [option(s)] sourcefile targetfile: Creates an internal link from the sourcefile to the targetfile, under a different name. Normally, such a link points directly to the sourcefile on one and the same file system. However, if ln is executed with the -s option, it creates a symbolic link that only points to the directory where the sourcefile is located, thus enabling linking across file systems.
+     -s Creates a symbolic link
+
+- cd [options(s)] [directory]: Changes the current directory. cd without any parameters changes to the user's home directory.
+
+- mkdir [option(s)] directoryname: Creates a new directory.
+
+- rmdir [option(s)] directoryname: Deletes the specified directory, provided it is already empty.
+
+- chown [option(s)] username.group file(s): Transfers the ownership of a file to the user with the specified user name.
+        -R Changes files and directories in all subdirectories.Changes the access permissions.
+
+- chmod [options] mode file(s):
+        Changes the access permissions.
+        The mode parameter has three parts: group, access, and access type. group accepts the following characters:
+        u user
+        g group
+        o others
+        
+        For access, access is granted by the + symbol and denied by the - symbol.
+        The access type is controlled by the following options:
+        r read
+        w write
+        x eXecute — executing files or changing to the directory.
+        s Set uid bit — the application or program is started as if it were started by the owner of the file.
+
+- tar [option(s)] archive file(s)
+      The tar puts one file or (usually) several files into an archive. Compression is optional.
+      tar is a quite complex command with a number of options available. The most frequently used options are:
+      -f Writes the output to a file and not to the screen as is usually the case
+      -c Creates a new tar archive
+      -r Adds files to an existing archive
+      -t Outputs the contents of an archive
+      -u Adds files, but only if they are newer than the files already contained in the archive
+      -x Unpacks files from an archive (extraction)
+      -z Packs the resulting archive with gzip
+      -j Compresses the resulting archive with bzip2
+      -v Lists files processed
+      The archive files created by tar end with .tar. If the tar archive was also compressed using gzip, the ending is .tgz or .tar.gz. If it was compressed using bzip2, .tar.bz2.
+- dpkg: for .deb files
+- locate pattern(s)
+
+- updatedb [option(s)]
+
+- find [option(s)]
+** touch 
+- create empty file(s)
+- https://www.tecmint.com/8-pratical-examples-of-linux-touch-command/
+** Commands to Access File Contents
+- cat [option(s)] file(s):
+      The cat command displays the contents of a file, printing the entire contents to the screen without interruption.
+      -n Numbers the output on the left margin
+
+- less [option(s)] file(s):
+       This command can be used to browse the contents of the specified file. Scroll half a screen page up or down with PgUp and PgDn or a full screen page down with Space. Jump to the beginning or end of a file using Home and End. Press Q to exit the program.
+
+- grep [option(s)] searchstring filenames
+       The grep command finds a specific searchstring in the specified file(s). If the search string is found, the command displays the line in which the searchstring was found along with the file name.
+       -i Ignores case
+       -l Only displays the names of the respective files, but not the text lines
+       -n Additionally displays the numbers of the lines in which it found a hit
+
+- diff [option(s)] file1 file2:
+       The diff command compares the contents of any two files. The output produced by the program lists all lines that do not match.
+       This is frequently used by programmers who need only send their program alterations and not the entire source code.
+       -q Only reports whether the two given files differ
+
+** grep and sed
+- https://www.cnblogs.com/flyor/p/6411140.html
+- https://blog.csdn.net/xclshwd/article/details/88283447
+** ps(process status)
+- https://www.cnblogs.com/shujuxiong/p/8983103.html
+** File Systems
+- mount 
+- unmout
+** Syetem Commands
+- sudo
+- echo
+- df 
+- du
+- free
+- date
+** Processes
+- top/htop
+- ps 
+- kill
+- killall
+** Network
+- ping [option(s)] host name|IP address
+- nslookup
+- telnet [option(s)] host name or IP address
+** Python environment
+- conda activate py27: switch to python2.7 environment
+- conda deactivate: switch back 
+** Miscellaneous
+- man [option(s)] keyword(s)
+  format and display the man pages
+- passwd
+- su
+- halt
+- reboot
+- clear: This command cleans up the visible area of the console. It has no options.
+https://www-uxsup.csx.cam.ac.uk/pub/doc/suse/suse9.0/userguide-9.0/ch24s04.html
+https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
+- check python package: pip list/conda list
+- check wifi password: https://fossbytes.com/find-saved-wifi-passwords-linux/
+** shell scripts
+- https://www.cnblogs.com/chenshikun/p/6387466.html
+** terminal 
+- c-s-w: close a terminal tab
+- c-s-q: close the entire terminal
+- c-s-w: open a new terminal tab
+- c-s-n: open a new terminal
+
+* remote
+- ~/.ssh: private key and public key
+- https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer
+- warning: REMOTE HOST IDENTIFICATION HAS CHANGED!: https://www.digitalocean.com/community/questions/warning-remote-host-identification-has-changed
+
+* material
+* regular expression
+- https://www.zhihu.com/question/48219401/answer/742444326
+- https://www.zhihu.com/topic/19577832/top-answers
+* hardwares
+- diode 二极管
+- triode 三极管
+- mechanical relays 机械式继电器
+- transitor 晶体管
+- semi-conductor
+* courses
+- 'Crash Course Computer Science': https://www.bilibili.com/video/av21376839?from=search&seid=
+* apps
+** installation list
+- make
+- chrome
+- anaconda
+- vim 
+- emacs
+- xmodmap
+- jupyter notebook
+- autoconfig(GNU)
+- doxygen 
+- automake
+- root
+- cmake
+- xgboost
+- ANNZ2
+- python setuptools
+- symlens
+- pixell
+- quicklens
+- dropbox
+- mendeley
+- mathematica
+- mathpix
+- chrome-vimium
+- chrome-momentum
+- z
+- rust-fd
+- i3
+- ranger(filemanager)
+- nomacs(image viewer)
+- synapse(launcher)
+- apitude
+- evince
+- encfs(encrypt)
+** conda/anaconda
+**** install anaconda:
+- wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh
+- bash Anaconda3-2018.12-Linux-x86_64.sh
+- "if 'conda:command not found'": https://support.anaconda.com/customer/en/portal/articles/2621189-conda-%22command-not-found%22-error
+- if neccessary, in .bashrc: export PATH="<path to anaconda>bin:$PATH
+** jupyter notebook
+**** installation
+- conda install jupyter notebook
+- https://tacc.github.io/CSC2017Institute/docs/day1/command_line_and_jupyter_install.html
+**** change theme
+- pip install jupyterthemes
+- jt -l
+- jt -t <name of the theme>
+- jt -r #reverting to original theme
+** xmodmap(keyboard configuration)
+- https://askubuntu.com/questions/120928/what-is-the-mod4d-shortcut-key
+- xmodmap .Xmodmap: excute the new keyboard mappi
+** chrome
+- cvim
+- new tab redirect
+- 
+** ANNZ
+- https://github.com/IftachSadeh/ANNZ
+- https://github.com/IftachSadeh/ANNZ/issues/3
+- cmake
+- root
+** xgboot
+- https://xgboost.readthedocs.io/en/latest/build.html
+- https://groups.google.com/a/continuum.io/forum/#!topic/anaconda/oFcY_a9XJ7A
+- wechat https://www.cnblogs.com/dunitian/p/9124806.html
+- jupyter notebook extension and Code prettify for PEP8 standards
+- dropbox: https://linoxide.com/linux-how-to/install-dropbox-ubuntu/
+** lensing related
+- Libsharp https://github.com/Libsharp/libsharp
+- pixell https://github.com/simonsobs/pixell/
+- symlens https://github.com/simonsobs/symlens
+
+** Feynman Account
+- https://github.com/pitt-cosmos/act-wiki/wiki/Installing-Miniconda,-Moby-2,-and-Jupyter-Notebook-to-Your-Feynman-Account
+** expressvpn 
+- expressvpn status
+- expressvpn list
+- expressvpn connect: optimal connection
+- expressvpn connect {location code}/{country}
+- expressvpn disconnect
+
+** tags
+- gnu global: https://www.gnu.org/software/global/globaldoc_toc.html
+** screen
+** z
+- https://github.com/rupa/z/search?utf8=%E2%9C%93&q=&type=
+** dropbox
+- https://help.dropbox.com/installs-integrations/desktop/linux-commands
+** potential languages
+- lisp
+- go
+- php
+- java
+- javascript
+- html
+** fzf
+- https://github.com/junegunn/fzf
+** rust-fd
+https://github.com/sharkdp/fd
+** i3
+- synopsis
+  https://www.jianshu.com/p/b9b644cf528f
+- https://linoxide.com/gui/install-i3-window-manager-linux/
+- https://www.maketecheasier.com/install-use-i3-window-manager-ubuntu/
+- https://i3wm.org/docs/refcard.html
+- https://i3wm.org/docs/userguide.html
+- adjust multiple displays 
+  https://unix.stackexchange.com/questions/344329/assign-workspaces-on-i3-to-multiple-displays
+  https://faq.i3wm.org/question/3747/enabling-multimedia-keys.1.html
+- $mod+Shift+c/i3-msg reload/i3-msg restart: reload and reset
+- multiple monitors: https://fedoramagazine.org/using-i3-with-multiple-monitors/
+- laptop monitor: https://www.reddit.com/r/i3wm/comments/6gtpm8/workspaces_remain_on_disconnected_monitors_output/
+- laptop monitor and external monitor show same things: 
+  1. xrandr: show name of outputs(eDP-1 and DP-1)
+  2. xrandr --output DP-1 --same-as eDP-1
+  3. https://blog.csdn.net/xxxxxx______xxxxxx/article/details/88049304
+- wireless network:
+  1. $nm #and press TAB key twice (to check the default network manager
+  2. if there is nm-applet, in dmenu, type nm-applet
+  3. https://cialu.net/manage-wi-fi-connections-i3wm/
+** ranger(filemanager)
+- https://github.com/ranger/ranger
+  -  
+** xrandr
+- https://fedoramagazine.org/using-i3-with-multiple-monitors/
+** encfs
+- https://help.ubuntu.com/community/FolderEncryption
+- sudo apt install encfs
+- encfs ~/.encrypted ~/visible
+- fusermount -u ~/visible
+- encfs ~/.encrypted ~/visible
