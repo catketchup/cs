@@ -1,5 +1,8 @@
 #+STARTUP: indent
 Emacs note
+* todo
+- table
+- emacs/ein markdown
 * new
 ** 08/2019
 - c-c j: go to function in the repository
@@ -14,6 +17,8 @@ Emacs note
 - doom-theses
 - doom-modeline
 - defun move-bottom-subtree: c-x c-j
+- emacs/scratch: c-c s
+- ein mode
 * emacs1
 ** keys
 - https://www.emacswiki.org/emacs/EmacsNewbieKeyReference
@@ -86,6 +91,9 @@ Emacs note
 - electric pair mode
 - show paren mode
 - smartparen mode   
+- doom-theses
+- doom-modelines
+- scratch
 *** melpa
 - https://blog.csdn.net/sjhuangx/article/details/51252522
 - update: M-x package-refresh-contents
@@ -103,7 +111,38 @@ Emacs note
 *** py-autopep8: https://github.com/paetzke/py-autopep8.el
 *** linum(show line numbers):
 - http://ergoemacs.org/emacs/emacs_line_number_mode.html
-*** ein?: run jupyter notebook in emacs
+*** ein: run jupyter notebook in emacs
+- ein:jupyter-server-start
+- ein:stop
+**** auto-complete
+(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
+
+  (defun user-ein-reply-callback (args content -metadata-not-used-)
+    (let ((callback (plist-get args :callback))
+          (candidates (plist-get content :matches)))
+      (funcall callback candidates)))
+
+  (defun user-company-ein-callback (callback)
+    (ein:kernel-complete
+     (ein:get-kernel)
+     (thing-at-point 'line)
+     (current-column)
+     (list :complete_reply
+           (cons #'user-ein-reply-callback (list :callback callback))))
+    )
+
+  (defun user-company-ein-backend (command &optional arg &rest ignored)
+    (interactive (list 'interactive))
+    (case command
+      (interactive (company-begin-backend 'user-company-ein-backend))
+      (prefix (company-anaconda-prefix))
+      (candidates (cons :async #'user-company-ein-callback))
+      (location nil)
+      (sorted t)
+      )
+    )
+
+
 *** evil
 *** elpy
 *** flycheck

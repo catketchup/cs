@@ -1,5 +1,6 @@
 #+STARTUP: indent
 Python for Data Analysis:
+* todo
 
 * new
 ** 08/2019
@@ -17,7 +18,8 @@ Python for Data Analysis:
 - numpy and array-oriented computing
 - Chapter 4 numpy basis: arrays and vectorized computation
 
-
-  
-
+- API(application programming interface)
+- memory mapped file 
+- pandas: time series manipulation
+- numpy
 
