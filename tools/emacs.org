@@ -2,7 +2,8 @@
 Emacs note
 * todo
 - table
-- emacs/ein markdown
+- emacs/ein markdown latex equations
+- emacs/ein theme
 * new
 ** 08/2019
 - c-c j: go to function in the repository
@@ -19,7 +20,8 @@ Emacs note
 - defun move-bottom-subtree: c-x c-j
 - emacs/scratch: c-c s
 - ein mode
-* emacs1
+- ein markdown
+* topics1
 ** keys
 - https://www.emacswiki.org/emacs/EmacsNewbieKeyReference
 ** move cursor
@@ -114,8 +116,9 @@ Emacs note
 *** ein: run jupyter notebook in emacs
 - ein:jupyter-server-start
 - ein:stop
+- C-u-c-b/a: add markdown
 **** auto-complete
-(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
+o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 
   (defun user-ein-reply-callback (args content -metadata-not-used-)
     (let ((callback (plist-get args :callback))
@@ -141,7 +144,6 @@ Emacs note
       (sorted t)
       )
     )
-
 
 *** evil
 *** elpy
@@ -192,7 +194,7 @@ Emacs note
 - https://www.emacswiki.org/emacs/BrowseUrl
 *** miscellaneous
 *** theme
-* emacs2
+* topics2
 ** dired(file manager)
 ** eshell
 ** upgrade emacs

@@ -4,7 +4,7 @@ Linux note
 ** 08/2019
 - encrypt using encfs;
 - install lxqt window manager
-* linux1
+* topics1
 ** remove apt
 - dpkg --list
 - sudo apt-get remove "package-name"
@@ -52,7 +52,7 @@ Linux note
 *** xdg-open (open a file or URL in the user's preferred application)
 - https://www.mankier.com/1/xdg-open
 - xdg-open [directory] (the default file manager)
-* linux2
+* topics2
 ** Keyboard Shortcuts
 https://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell-for-ubuntu-debian-suse-redhat-linux-etc/
 
@@ -267,6 +267,7 @@ https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
 - synapse(launcher)
 - apitude
 - evince
+- google-cvim
 - encfs(encrypt)
 - lxqt(window manager, for brightness, etc)
 ** conda/anaconda
@@ -366,3 +367,22 @@ https://github.com/sharkdp/fd
 - encfs ~/.encrypted ~/visible
 - fusermount -u ~/visible
 - encfs ~/.encrypted ~/visible
+** cvim(google extension)
+" basic navigation
+set smoothscroll
+let hintcharacters = "asdfghjklvn"
+
+" mapping of frequent used websites
+let @@arxiv = 'https://arxiv.org/'
+let @@baidu = 'http://www.baidu.com/'
+let @@bilibili = 'http://www.bilibili.com/'
+let @@github = 'http://www.github.com/'
+let @@google = 'http://www.google.com/'
+let @@mypitt = 'http://my.pitt.edu/'
+
+map Ar :tabnew @@arxiv<CR>
+map ba :tabnew @@baidu<CR>
+map bi :tabnew @@bilibili<CR>
+map gi :tabnew @@github<CR>
+map go :tabnew @@google<CR>
+map my :tabnew @@mypitt<CR>
