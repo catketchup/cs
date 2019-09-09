@@ -1,11 +1,13 @@
 #+STARTUP: indent
 Emacs note
-* todo
+* problems
 - table
 - emacs/ein markdown latex equations
 - emacs/ein theme
-* new
+- delete word
+* log
 ** 08/2019
+08/
 - c-c j: go to function in the repository
 - c-c f: go to function in the file
 - c-x n ...: narrow
@@ -21,6 +23,15 @@ Emacs note
 - emacs/scratch: c-c s
 - ein mode
 - ein markdown
+
+08/28
+- doom-nova theme
+- beacon mode
+- magic-latex-buffer
+
+** 09/2019
+09/08
+- ?: latex display buffer
 * topics1
 ** keys
 - https://www.emacswiki.org/emacs/EmacsNewbieKeyReference
@@ -96,6 +107,8 @@ Emacs note
 - doom-theses
 - doom-modelines
 - scratch
+- magic-latex-buffer
+- beacon
 *** melpa
 - https://blog.csdn.net/sjhuangx/article/details/51252522
 - update: M-x package-refresh-contents

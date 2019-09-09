@@ -1,9 +1,67 @@
 #+STARTUP: indent
 Linux note
-* new
+* log
 ** 08/2019
+08/19
 - encrypt using encfs;
 - install lxqt window manager
+
+08/29
+- linux scratch
+- cosmosis framework; toast framework;
+
+** 09/2019
+09/02
+- ?: lfs;
+
+09/04,05,06
+- quick tutorial;
+- quick tutorial, learned things from Yilun; 
+- makefile; quick tutorial;
+
+09/07,08,09
+- ?: slack sogou input; 
+- linux system; crontab; 
+* problems
+- slack Chinese
+- https://www.zhihu.com/question/59227720/answer/163594782: 有哪些命令行的软件堪称神器？
+- 
+* learn 
+**  linux tools quick 
+- https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html
+- start to learn
+- makefile: http://scc.qibebt.cas.cn/docs/linux/base/%B8%FA%CE%D2%D2%BB%C6%F0%D0%B4Makefile-%B3%C2%F0%A9.pdf
+- part 1, 2
+- 重定向？
+- 2.9 软件安装路径 path
+- part of 3, more details to learn in the future;
+
+** makefile 
+- use variables
+** gbd project debugger
+** find  
+- find . -type f -name ".emacs" -exec emacs {} \;
+- find . -type f -name "*.py" -exec python {} \;
+** grep
+- grep "keyword" . -R -n: (recursive and show line number)
+- ls -a |grep .emacs$| xargs -I {} cp {} ./new
+- man sar |grep "u"
+
+** xargs
+- ls | grep py$ | xargs -I {} cat {}
+- find . -type f -name "*.py" -exec python {} \;
+- ls | grep py$ | xargs -I {} cp ../{}.bak
+** awk 
+- can process the output like an excel list
+- ps aux|awk '{print $2-$3}'
+** awk and grep 
+- ps -fe| grep msv8 | grep -v MFORWARD | awk '{print $2}' | xargs kill -9;
+- ps aux | grep emacs | awk '{print $2}' | xarg -I {} kill -9 {}
+
+** system
+- https://zhuanlan.zhihu.com/p/51679405: 漫画赏析：Linux 内核到底长啥样
+** crontab
+- 
 * topics1
 ** remove apt
 - dpkg --list
@@ -194,6 +252,7 @@ https://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell
 - nslookup
 - telnet [option(s)] host name or IP address
 ** Python environment
+- conda create --name py27
 - conda activate py27: switch to python2.7 environment
 - conda deactivate: switch back 
 ** Miscellaneous
@@ -216,6 +275,10 @@ https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
 - c-s-w: open a new terminal tab
 - c-s-n: open a new terminal
 
+* topics3
+** find 
+- https://opensource.com/article/18/4/how-use-find-linux
+- 
 * remote
 - ~/.ssh: private key and public key
 - https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer
@@ -233,6 +296,9 @@ https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
 - semi-conductor
 * courses
 - 'Crash Course Computer Science': https://www.bilibili.com/video/av21376839?from=search&seid=
+* framework
+- toast
+- cosmosis
 * apps
 ** installation list
 - make
@@ -270,6 +336,8 @@ https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
 - google-cvim
 - encfs(encrypt)
 - lxqt(window manager, for brightness, etc)
+- fonts-symbola
+- sysstat
 ** conda/anaconda
 **** install anaconda:
 - wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh
@@ -386,3 +454,7 @@ map bi :tabnew @@bilibili<CR>
 map gi :tabnew @@github<CR>
 map go :tabnew @@google<CR>
 map my :tabnew @@mypitt<CR>
+* linux scratch
+- http://www.linuxfromscratch.org
+- LFS, read online, stable lfs, tried gcc
+- 

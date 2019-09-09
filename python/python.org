@@ -1,13 +1,31 @@
 #+STARTUP: indent
-* new
+* log
+** 08/2019
+08/29
+- py_data
+08/30
+- ?: py_data
+- projects; scipy.interpolate; 
+** 09/2019
+09/01
+- set python path
+
+09/06
 - 
-* topics
+* prolems
+- setuptools problems
+* topics1
 ** python material
 - https://zhuanlan.zhihu.com/p/21332075(basic, scientific computing, statics)
 ** packages
 **** installation
 - pip install -e .: with setup.py, symbolic link in environment
 - python -c "import quicklens as ql; print(ql.__file__);": show the location of the package in the environment
+**** Python environment
+- conda info --envs
+- conda create --name py27
+- conda activate py27: switch to python2.7 environment
+- conda deactivate: switch back 
 **** list
 - pip list
 - https://zhidao.baidu.com/question/1823287441402688028.html
@@ -69,10 +87,16 @@
 - https://docs.python.org/3/tutorial/modules.html
 - lambda function
 
+
+* topics 2
+** set python path
+in .bashrc
+- export PYTHONPATH=/home/my_user/code
+- echo $PYTHONPATH: (check)
 * python for data analysis:
 ** todo
 - 
-** new
+** log
 *** 08/2019
 - Chang she
 - intepreted language and compiled language
@@ -99,4 +123,16 @@ Chapter 4 numpy
 - astype
 - dtype
 - indexing and slicing
-- 
+
+08/29
+transpose arrays and swapping axes
+- arr = np.arrange(15).reshape((3,5))
+- arr.T
+- np.dot(arr.T, arr): matrix product
+- arr = np.arange(16).reshape((2,2,4)): higher dimensional arrays
+- arr.transpose 
+* projects
+- https://www.zhihu.com/collection/350799713: 练手项目
+
+
+
