@@ -14,7 +14,7 @@ cs note
 ** 09/2019
 09/02,08
 - datastructure
-- operating systems; cloud
+- operating systems; cloud;
 - 
 * problems
 * datastructure

@@ -1,17 +1,15 @@
 #+STARTUP: indent
 * log
 ** 08/2019
-08/29
-- py_data
-08/30
+08/29,30
 - ?: py_data
+- py_data
 - projects; scipy.interpolate; 
 ** 09/2019
-09/01
+09/01,09 Su
 - set python path
+- python environment; install package and create sybolic link in conda using pip;
 
-09/06
-- 
 * prolems
 - setuptools problems
 * topics1
@@ -21,9 +19,10 @@
 **** installation
 - pip install -e .: with setup.py, symbolic link in environment
 - python -c "import quicklens as ql; print(ql.__file__);": show the location of the package in the environment
-**** Python environment
+**** python environment
+- python --version
 - conda info --envs
-- conda create --name py27
+- conda create --name py27 python=2.7
 - conda activate py27: switch to python2.7 environment
 - conda deactivate: switch back 
 **** list
@@ -49,7 +48,7 @@
 - https://www.jianshu.com/p/bdbd577314f9
 - https://micropyramid.com/blog/understand-self-and-__init__-method-in-python-class/
 - __init__.py file
-- about 'object': https://blog.csdn.net/DeepOscar/article/details/80947155, there is no difference in python3 
+- about 'object': https://blog.csdn.net/deeposcar/article/details/80947155, there is no difference in python3 
 ** *args and **kwargs
 - https://www.geeksforgeeks.org/args-kwargs-python/
 - https://stackoverflow.com/questions/682504/what-is-a-clean-pythonic-way-to-have-multiple-constructors-in-python
@@ -69,13 +68,13 @@
 - https://blog.csdn.net/weixin_42744925/article/details/82378245
 - https://blog.csdn.net/qq_41562433/article/details/82995287
 - http://manpages.ubuntu.com/manpages/trusty/man1/f2py.1.html
-- http://cache.baiducontent.com/c?m=9d78d513d9971cef1eadc7221a16a671192397624c959b416b93d3169c3e1d070527f4ba543f0d4196806b6776f7120fb6b16c35200357e6c6979508c0b197287fdb20307b1bd04a15&p=8b2a9719999407fa03bd9b7e0e1398&newp=897bc54ad6c044e717a4c7710f5ca5231610db2151d6d501298ffe0cc4241a1a1a3aecbf2329150fd2c1776302a44f5feffb3c79340234f1f689df08d2ecce7e67c76e&user=baidu&fm=sc&query=fortran+%2Epyf&qid=9bf83e2a0008f358&p1=7
+- http://cache.baiducontent.com/c?m=9d78d513d9971cef1eadc7221a16a671192397624c959b416b93d3169c3e1d070527f4ba543f0d4196806b6776f7120fb6b16c35200357e6c6979508c0b197287fdb20307b1bd04a15&p=8b2a9719999407fa03bd9b7e0e1398&newp=897bc54ad6c044e717a4c7710f5ca5231610db2151d6d501298ffe0cc4241a1a1a3aecbf2329150fd2c1776302a44f5feffb3c79340234f1f689df08d2ecce7e67c76e&user=baidu&fm=sc&query=fortran+%2epyf&qid=9bf83e2a0008f358&p1=7
 ** setup.py
 - https://www.cnblogs.com/lyrichu/p/6818008.html
 ** class inheritance
 - https://baijiahao.baidu.com/s?id=1605159915276732747&wfr=spider&for=pc
 ** built-in functions
-- https://blog.csdn.net/Mr_791063894/article/details/85105838
+- https://blog.csdn.net/mr_791063894/article/details/85105838
 - https://blog.51cto.com/853056088/2089084
 - __file__
 ** parallel 
