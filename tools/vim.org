@@ -1,0 +1,12 @@
+#+STARTUP: indent
+vi/vim note
+* log 
+** 09/2019
+09/12 We
+- vi/vim 教程
+
+* vi/vim 教程
+- http://www.runoob.com/linux/linux-vim.html
+
+
+

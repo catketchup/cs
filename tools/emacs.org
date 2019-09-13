@@ -31,11 +31,18 @@ Emacs note
 - magic-latex-buffer
 
 ** 09/2019
-09/08,09,10
-- ?: latex display buffer; yilun's recommandation, cmu guy, org source code;
+09/08,09,10,11,12,13
+- ?: latex display buffer; cmu guy, 
 - ?: German input? extension package load;
-- ?: transplant emacs?
-- emacs configuration, munen; from helm to ivy;
+- org source code;
+
+- ?: transplant emacs; yilun's extension; open website in emacs, eww/Xwidget Webkit; 
+- emacs configuration, munen; from helm to ivy, swiper, abo-abo; 
+
+- ?: eshell shortkey? 
+- describe-function; run shell scripts in emacs(query?);
+
+- ?: shell-script mode pass parameter
 
 * topics1
 ** keys
@@ -91,9 +98,10 @@ Emacs note
 - c-c l: capture link
 - c-c c-l: insert link
 - c-c c-o: open the link
-** function
+** functions
 - use scratch to run code temperal
-- c-h k: show the function of a key
+- c-h k: show the function of a key(m-x describe-key)
+- c-h f: (m-x describe-function)
 - comment or uncomment
 - comment box
 - read pdf and make note: 
@@ -117,6 +125,7 @@ Emacs note
 - scratch
 - magic-latex-buffer
 - beacon
+- ivy/counsel/swiper
 *** melpa
 - https://blog.csdn.net/sjhuangx/article/details/51252522
 - update: M-x package-refresh-contents
@@ -205,8 +214,12 @@ o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 - c-c c-p: open process windowm
 - c-c c-c: run python file
 - python mode command: https://stackoverflow.com/questions/25669809/how-do-you-run-python-code-using-emacs
+- C-c-j jump to def/class
+- C-c-f find file
 *** c/c++ mode
 - http://top.jobbole.com/
+*** shell-script mode
+- c-c c-x execute script
 *** javascript mode
 *** tex mode
 *** gnu global and emacs

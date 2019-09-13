@@ -43,4 +43,10 @@ chapter 10. elementary data structures
 - https://www.zhihu.com/question/22608820/answer/21968467: linux c++, 陈硕
 * cloud
 ** alibaba cloud
-
+* potential languages
+- java
+- lisp
+- ruby
+- r
+- php
+- go

@@ -17,19 +17,26 @@ Linux note
 - quick tutorial, learned things from Yilun; 
 - makefile; quick tutorial;
 
-09/07,08,09,10
+09/07,08,09,10,11
 - ?: slack sogou input; 
-- ?: .gitignore and .hgignore
 - linux system; crontab; 
+
+- ?: .gitignore and .hgignore
 - quick tutorial; 
+
+- ?: tailor shell key bindings
 - installed stayfocused(chrome extension)
+
+- quick tutorial; shell script;
+- shell script;
+
 
 * problems
 - slack Chinese
 - https://www.zhihu.com/question/59227720/answer/163594782: 有哪些命令行的软件堪称神器？
 - 
 * learn 
-**  linux tools quick tutorial
+** linux tools quick tutorial
 - https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html
 - start to learn
 - makefile: http://scc.qibebt.cas.cn/docs/linux/base/%B8%FA%CE%D2%D2%BB%C6%F0%D0%B4Makefile-%B3%C2%F0%A9.pdf
@@ -38,6 +45,8 @@ Linux note
 - 2.9 软件安装路径 path
 - part of 3, more details to learn in the future;
 - 8.4 environment variables
+
+- 进阶工具，工具参考篇
 ** makefile 
 - use variables
 ** gbd project debugger
@@ -64,6 +73,12 @@ Linux note
 - https://zhuanlan.zhihu.com/p/51679405: 漫画赏析：Linux 内核到底长啥样
 ** crontab
 - 
+* shell script
+- http://www.runoob.com/linux/linux-shell.html
+- 至shell数组
+
+- 运算符
+
 * topics1
 ** remove apt
 - dpkg --list

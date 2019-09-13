@@ -6,9 +6,10 @@
 - py_data
 - projects; scipy.interpolate; 
 ** 09/2019
-09/01,09 Su
+09/01,09,11 Su
 - set python path
 - python environment; install package and create sybolic link in conda using pip;
+- ?: python project
 
 * prolems
 - setuptools problems
