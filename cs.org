@@ -12,10 +12,11 @@ cs note
 - class package
 - python path
 ** 09/2019
-09/02,08
+09/02,08,17
 - datastructure
 - operating systems; cloud;
-- 
+
+- mechaine learning
 * problems
 * datastructure
 * database
@@ -41,6 +42,7 @@ chapter 10. elementary data structures
 - https://blog.csdn.net/qq_40627648/article/details/84947620
 ** materials
 - https://www.zhihu.com/question/22608820/answer/21968467: linux c++, 陈硕
+* mechaine learning
 * cloud
 ** alibaba cloud
 * potential languages

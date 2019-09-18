@@ -5,7 +5,7 @@ Emacs note
 - emacs/ein markdown latex equations
 - emacs/ein theme
 - delete word
-- emacs latex buffer
+- transplant emacs; yilun's extension; open website in emacs, eww/Xwidget Webkit; 
 * log
 ** 08/2019
 08/
@@ -31,12 +31,11 @@ Emacs note
 - magic-latex-buffer
 
 ** 09/2019
-09/08,09,10,11,12,13
+09/08,09,10,11,12,13,15
 - ?: latex display buffer; cmu guy, 
 - ?: German input? extension package load;
 - org source code;
 
-- ?: transplant emacs; yilun's extension; open website in emacs, eww/Xwidget Webkit; 
 - emacs configuration, munen; from helm to ivy, swiper, abo-abo; 
 
 - ?: eshell shortkey? 
@@ -44,6 +43,12 @@ Emacs note
 
 - ?: shell-script mode pass parameter
 
+09/15
+- configured emacs on the old laptop;
+- ?: Centaur emacs; require and install;
+
+09/16
+- Centaur emacs; rgrep; provide;
 * topics1
 ** keys
 - https://www.emacswiki.org/emacs/EmacsNewbieKeyReference
@@ -241,3 +246,18 @@ o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 - sudo apt remove --autoremove emacs26 emacs26-nox
 ** from helm to ivy 
 - https://sam217pa.github.io/2016/09/13/from-helm-to-ivy/#fn:2
+* people
+* centaur emacs
+- https://github.com/seagle0128/.emacs.d (centaur emacs, Vincent Zhang)
+- init-swiper
+- wrap 
+- backspace C-; 
+- backup-directory-alist 
+- turn on/off flyspell/flycheck
+- ansi-term 
+- magic-latex 
+- German input
+- youdao
+
+- ?: sogou Chinese input
+- ?: org-mode latex preview

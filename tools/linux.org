@@ -17,24 +17,28 @@ Linux note
 - quick tutorial, learned things from Yilun; 
 - makefile; quick tutorial;
 
-09/07,08,09,10,11
-- ?: slack sogou input; 
+09/07,08,09,10,11,12,13
 - linux system; crontab; 
 
-- ?: .gitignore and .hgignore
 - quick tutorial; 
 
-- ?: tailor shell key bindings
 - installed stayfocused(chrome extension)
 
 - quick tutorial; shell script;
 - shell script;
 
+09/14,16
+- problems;
 
+- keyboard layout;
 * problems
+- slack sogou input; 
 - slack Chinese
 - https://www.zhihu.com/question/59227720/answer/163594782: 有哪些命令行的软件堪称神器？
-- 
+- tailor shell key bindings
+- .gitignore and .hgignore
+- restore rm;
+- github ssh;
 * learn 
 ** linux tools quick tutorial
 - https://linuxtools-rst.readthedocs.io/zh_CN/latest/index.html
@@ -55,10 +59,10 @@ Linux note
 - find . -type f -name "*.py" -exec python {} \;
 ** grep
 - grep "keyword" . -R -n: (recursive and show line number)
-- ls -a |grep .emacs$| xargs -I {} cp {} ./new
+- ls -a |grep "emacs"| xargs -I {} cp {} ./new
 - man sar |grep "u"
 
-** xargs
+** xarg
 - ls | grep py$ | xargs -I {} cat {}
 - find . -type f -name "*.py" -exec python {} \;
 - ls | grep py$ | xargs -I {} cp ../{}.bak
@@ -73,12 +77,6 @@ Linux note
 - https://zhuanlan.zhihu.com/p/51679405: 漫画赏析：Linux 内核到底长啥样
 ** crontab
 - 
-* shell script
-- http://www.runoob.com/linux/linux-shell.html
-- 至shell数组
-
-- 运算符
-
 * topics1
 ** remove apt
 - dpkg --list
@@ -296,6 +294,12 @@ https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
 ** find 
 - https://opensource.com/article/18/4/how-use-find-linux
 - 
+* shell script
+- http://www.runoob.com/linux/linux-shell.html
+- 至shell数组
+
+- 运算符
+- 流程控制
 * remote
 - ~/.ssh: private key and public key
 - https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer
@@ -369,8 +373,21 @@ https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
 - jt -t <name of the theme>
 - jt -r #reverting to original theme
 ** xmodmap(keyboard configuration)
-- https://askubuntu.com/questions/120928/what-is-the-mod4d-shortcut-key
+- https://askubuntu.com/questions/120928/what-is-the-mod4d-shortcut-key 
+- https://www.cnblogs.com/yinheyi/p/10146900.html (linux keycode)
 - xmodmap .Xmodmap: excute the new keyboard mappi
+
+remove mod1 = Alt_L
+add control = Alt_L 
+keycode 133 = Meta_L Super_L
+keycode 66 = Caps_Lock
+keycode 9 = Escape
+remove Lock = Caps_Lock
+keycode 66 = Escape
+
+alias resetkb="setxkbmap -layout us" (reset)
+** keycode
+- xev | grep 'keycode'
 ** chrome
 - cvim
 - new tab redirect
@@ -469,6 +486,8 @@ map bi :tabnew @@bilibili<CR>
 map gi :tabnew @@github<CR>
 map go :tabnew @@google<CR>
 map my :tabnew @@mypitt<CR>
+** cmake
+- https://askubuntu.com/questions/829310/how-to-upgrade-cmake-in-ubuntu
 * linux scratch
 - http://www.linuxfromscratch.org
 - LFS, read online, stable lfs, tried gcc

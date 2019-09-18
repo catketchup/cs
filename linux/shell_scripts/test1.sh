@@ -65,3 +65,42 @@ if [ $a != $b ]
 then
     echo "a doesn't equals b "
 fi    
+
+
+if [ $a -eq $b ]
+then
+    echo "$a -eq $b : a 等于 b"
+else
+    echo "$a -eq $b: a 不等于 b"
+fi
+
+if [ $a -ne $b ]
+then
+    echo "$a -ne $b: a 不等于 b"
+else
+    echo "$a -ne $b : a 等于 b"
+fi    
+    
+# bolean operator
+if [ $a -lt 100 -o $b -gt 15 ]
+then
+    echo "$a is less than 100 and $b is greater than 15: return true"
+else
+    echo "$a is less than 100 and $b is greater than 15: return false"
+fi    
+    
+# logic operator
+
+# string operator
+a='abc'
+b='dfg'
+
+if [ $a = $b ]
+then
+    echo "$a = $b: a equals b"
+else
+    echo "$a !+ $b: a doesn't b"
+fi    
+   
+
+# 文件测试运算符
