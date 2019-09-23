@@ -136,3 +136,5 @@ transpose arrays and swapping axes
 
 
 
+* people
+- Guido van Rossum

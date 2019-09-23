@@ -27,10 +27,14 @@ Linux note
 - quick tutorial; shell script;
 - shell script;
 
-09/14,16
+09/14,16,18,20
 - problems;
 
 - keyboard layout;
+
+- deepin
+
+- ?: box;
 * problems
 - slack sogou input; 
 - slack Chinese
@@ -491,4 +495,3 @@ map my :tabnew @@mypitt<CR>
 * linux scratch
 - http://www.linuxfromscratch.org
 - LFS, read online, stable lfs, tried gcc
-- 

@@ -1,11 +1,13 @@
 #+STARTUP: indent
 Emacs note
 * problems
-- table
 - emacs/ein markdown latex equations
-- emacs/ein theme
-- delete word
-- transplant emacs; yilun's extension; open website in emacs, eww/Xwidget Webkit; 
+- transplant emacs;// 
+- yilun's extension; 
+- open website in emacs, eww/Xwidget Webkit 
+- install an exention without using emacs
+- sougou input and emacs
+- centaur emacs github
 * log
 ** 08/2019
 08/
@@ -47,8 +49,16 @@ Emacs note
 - configured emacs on the old laptop;
 - ?: Centaur emacs; require and install;
 
-09/16
+09/16,17,18,20,22
 - Centaur emacs; rgrep; provide;
+
+- people; 
+
+- python-mode; dired; read-only;
+
+- centaur, anaconda mode; problems;
+
+- sogou input in emacs; backspace, M-,;cl
 * topics1
 ** keys
 - https://www.emacswiki.org/emacs/EmacsNewbieKeyReference
@@ -246,7 +256,18 @@ o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 - sudo apt remove --autoremove emacs26 emacs26-nox
 ** from helm to ivy 
 - https://sam217pa.github.io/2016/09/13/from-helm-to-ivy/#fn:2
+** read-only-mode
+- read-only-mode
+- revert-buffer
+- 
 * people
+** Richard Stallman
+- founder of the GNU Project and author of GNU Emacs
+** manateelazycat(王勇)
+- https://manateelazycat.github.io/index.html
+- 
+** important hakers
+- https://manateelazycat.github.io/emacs/2019/05/12/emacs-hackers.html
 * centaur emacs
 - https://github.com/seagle0128/.emacs.d (centaur emacs, Vincent Zhang)
 - init-swiper
@@ -254,10 +275,33 @@ o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 - backspace C-; 
 - backup-directory-alist 
 - turn on/off flyspell/flycheck
-- ansi-term 
+- ansi-term: line mode and character mode
 - magic-latex 
 - German input
 - youdao
+- show-paren-mode
+- emacs client
+
+python-mode
+- auto-pep8//yapf
+- anaconda, python version
+- setq and config
+
+- ?: babel
+- ?: config read-only mode and hooks
+- ?: remind the routines in the modules
+- ?: swiper cursor
+
+- ?: sphinx-doc
+- ?: multicusor
+- ?: auto-complete
+- ?: projectile
+- ?: python functionality
+- ?: ein mode: can't open ipynb
+- ?: anaconda-mode
+- 
 
 - ?: sogou Chinese input
 - ?: org-mode latex preview
+- ?: font size
+
