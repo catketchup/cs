@@ -35,6 +35,12 @@ Linux note
 - deepin
 
 - ?: box;
+
+** 10/2019
+10/09, 15, 25
+- cmake
+- resource
+- anaconda environment problems
 * problems
 - slack sogou input; 
 - slack Chinese
@@ -61,6 +67,7 @@ Linux note
 ** find  
 - find . -type f -name ".emacs" -exec emacs {} \;
 - find . -type f -name "*.py" -exec python {} \;
+ 
 ** grep
 - grep "keyword" . -R -n: (recursive and show line number)
 - ls -a |grep "emacs"| xargs -I {} cp {} ./new
@@ -271,9 +278,7 @@ https://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell
 - nslookup
 - telnet [option(s)] host name or IP address
 ** Python environment
-- conda create --name py27
-- conda activate py27: switch to python2.7 environment
-- conda deactivate: switch back 
+see anaconda environment
 ** Miscellaneous
 - man [option(s)] keyword(s)
   format and display the man pages
@@ -298,6 +303,8 @@ https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
 ** find 
 - https://opensource.com/article/18/4/how-use-find-linux
 - 
+** cmake
+- https://www.cnblogs.com/cv-pr/p/6206921.html build a cmake project
 * shell script
 - http://www.runoob.com/linux/linux-shell.html
 - 至shell数组
@@ -361,12 +368,22 @@ https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
 - lxqt(window manager, for brightness, etc)
 - fonts-symbola
 - sysstat
+- tmux
 ** conda/anaconda
-**** install anaconda:
+*** install anaconda:
 - wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh
 - bash Anaconda3-2018.12-Linux-x86_64.sh
 - "if 'conda:command not found'": https://support.anaconda.com/customer/en/portal/articles/2621189-conda-%22command-not-found%22-error
 - if neccessary, in .bashrc: export PATH="<path to anaconda>bin:$PATH
+*** environment
+- conda env list
+- conda create --name py27 python=2.7
+- conda activate py27: switch to python2.7 environment
+- conda deactivate: switch back 
+
+remove env: - conda env remove -n ENV_NAME
+*** (base)
+- https://askubuntu.com/questions/1026383/why-does-base-appear-in-front-of-my-terminal-prompt
 ** jupyter notebook
 **** installation
 - conda install jupyter notebook
@@ -492,6 +509,11 @@ map go :tabnew @@google<CR>
 map my :tabnew @@mypitt<CR>
 ** cmake
 - https://askubuntu.com/questions/829310/how-to-upgrade-cmake-in-ubuntu
+** tmux
 * linux scratch
 - http://www.linuxfromscratch.org
 - LFS, read online, stable lfs, tried gcc
+** log
+- 
+* resource
+- https://zhuanlan.zhihu.com/p/36801617

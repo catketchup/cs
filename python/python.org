@@ -13,6 +13,7 @@
 
 * prolems
 - setuptools problems
+- python path machenism, conda environment;
 * topics1
 ** python material
 - https://zhuanlan.zhihu.com/p/21332075(basic, scientific computing, statics)
@@ -93,6 +94,8 @@
 in .bashrc
 - export PYTHONPATH=/home/my_user/code
 - echo $PYTHONPATH: (check)
+* numba
+
 * python for data analysis:
 ** todo
 - 

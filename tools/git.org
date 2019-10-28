@@ -1,6 +1,63 @@
 #+STARTUP: indent
 Git note
-* new
+* log
+** 2019
+10/26
+- liao
+* 廖雪峰git
+- working directory
+- repository
+- ssh-keygen
+- 搭建git服务器
+- master, HEAD, pointer
+* basic
+** concepts
+- working directory
+- stage
+- repository
+- HEAD
+** version
+
+- git log 
+- git reset --hard HEAD^: go to the previous version in repository
+- git reset --hard <commit ID>
+- git reflog
+
+- git checkout <file>: checkout to the latest version in repository or checkout from stage to working directory
+
+** branch
+create and merge
+- git checkout -b <branch>/ git switch -c <branch>
+- git checkout <branch>/git switch <branck>
+- git branch -d <branch>
+- git merge <branch>: merge the branch with master, should switch to master before merge
+
+conflict
+- "git status" can be used to check the conflict of branches
+- resolve the conflicts in the file then add and commit
+
+manage
+- git log --graph/ git log --graph --pretty=oneline --abbrev-commit
+
+bug branch
+- git stash
+- git merge --no-ff -m "merged bug fix 101" issue-101
+- git stash list
+- git stash apply, git stash drop/ git stash pop
+- git cherry-pick "commit ID"
+
+## all branches share the same working directory and stage?
+## stash before switch branch
+** remote
+- git remote -v
+- git push orgin branch-name; if failed: git pull
+- 在本地创建和远程分支对应的分支: git checkout -b branch-name orgin/branch-name, 本地和远程分支的名称最好一致
+- 建立本地分支和远程分支的关联: git branch --set-upstream branch-name origin/branch-named
+- 从远程抓取分支: git pull，如果有冲突，要先处理冲突。
+
+** rebase
+
+
 * git
 ** push without username and password
 - https://medium.com/@amanze.ogbonna/accessing-pushing-to-github-without-username-and-password-3022feb077fb
@@ -53,3 +110,11 @@ Git note
 ** github
 
 # hi
+* keygen
+- ssh-keygen -t rsa -C "your email"
+- ~/.ssh
+* upgrade
+#!/bin/bash
+sudo add-apt-repository -y ppa:git-core/ppa
+sudo apt-get update
+sudo apt-get install git -y

@@ -22,6 +22,8 @@ cs note
 
 - machine learning; quantum computer;
 * problems
+- chat bot;
+* block chain
 * datastructure
 * database
 - zhihu: https://www.zhihu.com/topic/19552067/top-answers
@@ -33,6 +35,7 @@ cs note
 09/08
 - introduction to algorithm
 - operating systems
+** leetcode
 ** introduction to algorithm
 chapter 10. elementary data structures
 
@@ -47,7 +50,7 @@ chapter 10. elementary data structures
 ** materials
 - https://www.zhihu.com/question/22608820/answer/21968467: linux c++, 陈硕
 * machine learning
-- https://github.com/fengdu78
+- https://github.com/fengdu78 
 * quantum computer
 - downloaded 量子计算机与编程入门
 * cloud
