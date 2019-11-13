@@ -51,6 +51,8 @@ chapter 10. elementary data structures
 - https://www.zhihu.com/question/22608820/answer/21968467: linux c++, 陈硕
 * machine learning
 - https://github.com/fengdu78 
+** materials
+- https://www.youtube.com/watch?v=Lu56xVlZ40M&feature=youtu.be
 * quantum computer
 - downloaded 量子计算机与编程入门
 * cloud

@@ -49,11 +49,16 @@ bug branch
 ## all branches share the same working directory and stage?
 ## stash before switch branch
 ** remote
+- git remote add origin "address"
+- git push -u origin master
+
 - git remote -v
-- git push orgin branch-name; if failed: git pull
-- 在本地创建和远程分支对应的分支: git checkout -b branch-name orgin/branch-name, 本地和远程分支的名称最好一致
-- 建立本地分支和远程分支的关联: git branch --set-upstream branch-name origin/branch-named
+- git push origin branch-name; if failed: git pull
+- 在本地创建和远程分支对应的分支: git checkout -b branch-name origin/branch-name, 本地和远程分支的名称最好一致
+- 建立本地分支和远程分支的关联: git branch --set-upstream branch-name origin/branch-name/ git branch --set-upstream-to=origin/branch-name branch-name
 - 从远程抓取分支: git pull，如果有冲突，要先处理冲突。
+
+- "unrelated history": git pull --allow-unrelated-histories
 
 ** rebase
 

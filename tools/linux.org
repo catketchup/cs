@@ -122,7 +122,7 @@ Linux note
 - grep -R cosmology (R is for recursive, means global)
 - cat setup.py
 - cat setup.py | grep lens
-- ps aux | grep emacs | awk '{print $2}' | xarg -I {} kill -9 {}
+- ps -aux | grep emacs | awk '{print $2}' | xargs -I {} kill -9 {}
 - grep -R ^lens.*95$
 - grep -R .*lens.*95$
 - cat ~/.bashrc | grep [keyword]
@@ -385,14 +385,15 @@ remove env: - conda env remove -n ENV_NAME
 *** (base)
 - https://askubuntu.com/questions/1026383/why-does-base-appear-in-front-of-my-terminal-prompt
 ** jupyter notebook
-**** installation
+*** installation
 - conda install jupyter notebook
 - https://tacc.github.io/CSC2017Institute/docs/day1/command_line_and_jupyter_install.html
-**** change theme
+*** change theme
 - pip install jupyterthemes
 - jt -l
 - jt -t <name of the theme>
 - jt -r #reverting to original theme
+*** extensions 
 ** xmodmap(keyboard configuration)
 - https://askubuntu.com/questions/120928/what-is-the-mod4d-shortcut-key 
 - https://www.cnblogs.com/yinheyi/p/10146900.html (linux keycode)
@@ -510,6 +511,26 @@ map my :tabnew @@mypitt<CR>
 ** cmake
 - https://askubuntu.com/questions/829310/how-to-upgrade-cmake-in-ubuntu
 ** tmux
+https://linuxize.com/post/getting-started-with-tmux/
+- sessions, windows, panes
+
+- C-b ?
+- tmux new -s session_name
+- C-b d: detach from tmux session
+- tmux ls: get a list of the currently running sessions
+- tmux attach-session -t session-number
+- C-b c: create a new window
+
+in tmux
+- C+b c Create a new window (with shell)
+- C+b w Choose window from a list
+- C+b 0 Switch to window 0 (by number )
+- C+b , Rename the current window
+- C+b % Split current pane horizontally into two panes
+- C+b " Split current pane vertically into two panes
+- C+b o Go to the next pane
+- C+b ; Toggle between the current and previous pane
+- C+b x Close the current pane
 * linux scratch
 - http://www.linuxfromscratch.org
 - LFS, read online, stable lfs, tried gcc
