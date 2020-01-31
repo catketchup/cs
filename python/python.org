@@ -87,13 +87,15 @@
 - package and subpackge
 - https://docs.python.org/3/tutorial/modules.html
 - lambda function
-
+- test: https://blog.csdn.net/yucicheung/article/details/79445350
 
 * topics 2
 ** set python path
 in .bashrc
 - export PYTHONPATH=/home/my_user/code
 - echo $PYTHONPATH: (check)
+- check pythonpath: python -c "import sys; print(sys.path)"|grep tools
+
 * numba
 
 * python for data analysis:
@@ -134,9 +136,13 @@ transpose arrays and swapping axes
 - np.dot(arr.T, arr): matrix product
 - arr = np.arange(16).reshape((2,2,4)): higher dimensional arrays
 - arr.transpose 
+** numpy
+- np.zeros((2,4)): create empty ndarray: 
+- np.size(x)/x.size: size of the ndarray
+  : x = np.zeros((2,4))
+    x[1,:].size
 * projects
 - https://www.zhihu.com/collection/350799713: 练手项目
-
 
 
 * people

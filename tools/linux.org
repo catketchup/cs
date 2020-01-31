@@ -82,7 +82,7 @@ Linux note
 - ps aux|awk '{print $2-$3}'
 ** awk and grep 
 - ps -fe| grep msv8 | grep -v MFORWARD | awk '{print $2}' | xargs kill -9;
-- ps aux | grep emacs | awk '{print $2}' | xarg -I {} kill -9 {}
+- ps aux | grep emacs | awk '{print $2}' | xargs -I {} kill -9 {}
 
 ** system
 - https://zhuanlan.zhihu.com/p/51679405: 漫画赏析：Linux 内核到底长啥样
@@ -175,6 +175,8 @@ https://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell
      -i Waits for confirmation, if necessary, before an existing targetfile is overwritten
      -r Copies recursively (includes subdirectories)
 - scp
+  eg: scp file hongbo@cori.nersc.gov:/global/homes/h/hongbo/reion-lens/data/websky
+
 - mv [option(s)] sourcefile targetfile: Copies sourcefile to targetfile then deletes the original sourcefile.
      -b Creates a backup copy of the sourcefile before moving
      -i Waits for confirmation, if necessary, before an existing targetfile is overwritten
@@ -315,7 +317,11 @@ https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
 - ~/.ssh: private key and public key
 - https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer
 - warning: REMOTE HOST IDENTIFICATION HAS CHANGED!: https://www.digitalocean.com/community/questions/warning-remote-host-identification-has-changed
-
+** nersc
+- python environment
+https://docs.nersc.gov/programming/high-level-environments/python/
+- yilun gave
+https://edgeofmistery.wordpress.com/2019/03/16/nersc-jupyterhub-use-the-same-environment-as-bash/
 * material
 * regular expression
 - https://www.zhihu.com/question/48219401/answer/742444326
@@ -369,13 +375,14 @@ https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
 - fonts-symbola
 - sysstat
 - tmux
+- insync/google drive
 ** conda/anaconda
 *** install anaconda:
 - wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh
 - bash Anaconda3-2018.12-Linux-x86_64.sh
 - "if 'conda:command not found'": https://support.anaconda.com/customer/en/portal/articles/2621189-conda-%22command-not-found%22-error
 - if neccessary, in .bashrc: export PATH="<path to anaconda>bin:$PATH
-*** environment
+*** envddduuironment
 - conda env list
 - conda create --name py27 python=2.7
 - conda activate py27: switch to python2.7 environment
@@ -512,14 +519,18 @@ map my :tabnew @@mypitt<CR>
 - https://askubuntu.com/questions/829310/how-to-upgrade-cmake-in-ubuntu
 ** tmux
 https://linuxize.com/post/getting-started-with-tmux/
+https://gist.github.com/henrik/1967800
+https://tmuxcheatsheet.com/?q=&hPP=100&idx=tmux_cheats&p=0&is_v=1 (cheat sheet)
 - sessions, windows, panes
 
 - C-b ?
 - tmux new -s session_name
 - C-b d: detach from tmux session
 - tmux ls: get a list of the currently running sessions
-- tmux attach-session -t session-number
+- tmux a #
+- tmux a -t sessionname/ tmux attach-session -t session-number
 - C-b c: create a new window
+- tmux kill-session -t sessionname
 
 in tmux
 - C+b c Create a new window (with shell)
@@ -531,6 +542,9 @@ in tmux
 - C+b o Go to the next pane
 - C+b ; Toggle between the current and previous pane
 - C+b x Close the current pane
+** insync/google drive
+https://www.insynchq.com/downloads?start=true
+Download/repositories
 * linux scratch
 - http://www.linuxfromscratch.org
 - LFS, read online, stable lfs, tried gcc

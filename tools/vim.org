@@ -27,3 +27,5 @@ vi/vim note
 
 
 
+* tricks
+- comment mutliply lines: https://unix.stackexchange.com/questions/120615/how-to-comment-multiple-lines-at-once
