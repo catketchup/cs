@@ -144,6 +144,7 @@ transpose arrays and swapping axes
 * projects
 - https://www.zhihu.com/collection/350799713: 练手项目
 
-
 * people
 - Guido van Rossum
+* MPI for python
+- https://mpi4py.readthedocs.io/en/stable/

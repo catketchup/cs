@@ -64,6 +64,9 @@ Emacs note
 - ?:ein-mode plot pop up;
 - ?:lpy-mode; .el file read only; errors; github;  configuration; kill buffers;
 - ?:startup page fo centaur; auto log in circe; summary on how to debug in emacs;
+** 02/2020
+02/15
+- PDFView
 * topics1
 ** keys
 - https://www.emacswiki.org/emacs/EmacsNewbieKeyReference
@@ -251,6 +254,10 @@ o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 - https://www.emacswiki.org/emacs/BrowseUrl
 *** miscellaneous
 *** theme
+*** latex
+1.C-c C-c and choose latex compiler and compile
+2.C-c C-c and choose bibtex to compile the .bib file
+3.compile for another 2 time
 * topics2
 ** dired(file manager)
 ** eshell
@@ -265,6 +272,8 @@ o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 - read-only-mode
 - revert-buffer
 - 
+** PDFView
+- C-c C-c: view pdf
 * people
 ** Richard Stallman
 - founder of the GNU Project and author of GNU Emacs

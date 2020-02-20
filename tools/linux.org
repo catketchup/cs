@@ -67,7 +67,8 @@ Linux note
 ** find  
 - find . -type f -name ".emacs" -exec emacs {} \;
 - find . -type f -name "*.py" -exec python {} \;
- 
+- find . -name **analysis** | grep python
+
 ** grep
 - grep "keyword" . -R -n: (recursive and show line number)
 - ls -a |grep "emacs"| xargs -I {} cp {} ./new
@@ -83,7 +84,7 @@ Linux note
 ** awk and grep 
 - ps -fe| grep msv8 | grep -v MFORWARD | awk '{print $2}' | xargs kill -9;
 - ps aux | grep emacs | awk '{print $2}' | xargs -I {} kill -9 {}
-
+- ps aux | grep emacs | awk '{print $2}' | xargs kill -9
 ** system
 - https://zhuanlan.zhihu.com/p/51679405: 漫画赏析：Linux 内核到底长啥样
 ** crontab
@@ -376,6 +377,7 @@ https://edgeofmistery.wordpress.com/2019/03/16/nersc-jupyterhub-use-the-same-env
 - sysstat
 - tmux
 - insync/google drive
+- xclip
 ** conda/anaconda
 *** install anaconda:
 - wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh
@@ -545,6 +547,9 @@ in tmux
 ** insync/google drive
 https://www.insynchq.com/downloads?start=true
 Download/repositories
+** xclip
+eg. ls | xclip
+and type C-; to go to the clipboard
 * linux scratch
 - http://www.linuxfromscratch.org
 - LFS, read online, stable lfs, tried gcc
@@ -552,3 +557,8 @@ Download/repositories
 - 
 * resource
 - https://zhuanlan.zhihu.com/p/36801617
+* my summary
+- find 
+https://opensource.com/article/18/4/how-use-find-linux
+- grep 
+
