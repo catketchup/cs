@@ -1,0 +1,528 @@
+% Created 2020-02-29 Sat 18:19
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\author{user name}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={user name},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.2 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+Emacs note
+\section{problems}
+\label{sec:orge5e3682}
+\begin{itemize}
+\item emacs/ein markdown latex equations
+\item transplant emacs;//
+\item yilun's extension;
+\item open website in emacs, eww/Xwidget Webkit
+\item install an exention without using emacs
+\item sougou input and emacs
+\item centaur emacs github
+\end{itemize}
+\section{log}
+\label{sec:orga9c08ec}
+\subsection{08/2019}
+\label{sec:org95ed809}
+08/
+\begin{itemize}
+\item c-c j: go to function in the repository
+\item c-c f: go to function in the file
+\item c-x n \ldots{}: narrow
+\item c-j: enter
+\item c-': multicusor
+\item c-;: backspace
+\item electric pair mode
+\item show paren mode
+\item smartparen mode
+\item doom-theses
+\item doom-modeline
+\item defun move-bottom-subtree: c-x c-j
+\item emacs/scratch: c-c s
+\item ein mode
+\item ein markdown
+\end{itemize}
+
+08/28
+\begin{itemize}
+\item doom-nova theme
+\item beacon mode
+\item magic-latex-buffer
+\end{itemize}
+
+\subsection{09/2019}
+\label{sec:org22bdbe7}
+09/08,09,10,11,12,13,15
+\begin{itemize}
+\item ?: latex display buffer; cmu guy,
+\item ?: German input? extension package load;
+\item org source code;
+
+\item emacs configuration, munen; from helm to ivy, swiper, abo-abo;
+
+\item ?: eshell shortkey?
+\item describe-function; run shell scripts in emacs(query?);
+
+\item ?: shell-script mode pass parameter
+\end{itemize}
+
+09/15
+\begin{itemize}
+\item configured emacs on the old laptop;
+\item ?: Centaur emacs; require and install;
+\end{itemize}
+
+09/16,17,18,20,22,23,26
+\begin{itemize}
+\item Centaur emacs; rgrep; provide;
+
+\item people;
+
+\item python-mode; dired; read-only;
+
+\item centaur, anaconda mode; problems;
+
+\item sogou input in emacs; backspace, M-,;cl
+
+\item irc;
+\item ?:ein-mode plot pop up;
+\item ?:lpy-mode; .el file read only; errors; github;  configuration; kill buffers;
+\item ?:startup page fo centaur; auto log in circe; summary on how to debug in emacs;
+\end{itemize}
+\subsection{02/2020}
+\label{sec:org3b6aa65}
+02/15
+\begin{itemize}
+\item PDFView
+\end{itemize}
+
+02/29
+\begin{itemize}
+\item changed centaur-theme to be "default" in custom.el
+\item commented out "circe"
+\end{itemize}
+
+
+\section{topics1}
+\label{sec:orga1d6d65}
+\subsection{keys}
+\label{sec:org7c9b861}
+\begin{itemize}
+\item \url{https://www.emacswiki.org/emacs/EmacsNewbieKeyReference}
+\end{itemize}
+\subsection{move cursor}
+\label{sec:orgfe28edd}
+\begin{itemize}
+\item c-f: forward one character
+\item c-b: backward one character
+\item c-n: down one screen line
+\item c-p: up one screen line
+\item c-a: the begining of the line
+\item c-e: the end of the line
+
+\item m-f: forward one word
+\item m-b: backward one word
+\item c-c c-p: move up to the closest entry
+\item c-c c-n: move down to the closest entry
+\item c-c c-u: move up to the parent heading
+\item c-c c-f: move forward to the next heading at the same level
+
+\item c-v: page down
+\item m-v: page up
+\item m-s->: to the top of the file
+\item m-s-<: to the bottom of the file
+
+\item m-x: emacs command
+\item c-o: switch in the emacs command region
+\end{itemize}
+\subsection{text}
+\label{sec:org550fcce}
+\begin{itemize}
+\item c-w: cut the text
+\item m-w: copy the text
+\item c-k: kill a line
+\item c-y: paste the text
+\item c-d: delete
+\item c-/: undo
+\item c-s: search
+\item c-e: export
+\end{itemize}
+\subsection{buffer}
+\label{sec:orga44919a}
+\begin{itemize}
+\item c-x b: go to a buffer
+\item c-x k: kill the buffer
+\item c-x d: kill the buffer in the command place
+\end{itemize}
+\subsection{file}
+\label{sec:org59d0d96}
+\begin{itemize}
+\item c-x c-f: find files
+\item c-x c-s: save the file
+\item c-x c-b: buffer list
+\item c-x b: move to another buffer
+\item c-x c: exit
+\end{itemize}
+\subsection{frame}
+\label{sec:org697aad3}
+\begin{itemize}
+\item c-x 3: left/right split
+\item c-x 2: up/down split
+\item c-x 0: close the current frame
+\item c-x 1: maximize the current frame
+\item c-x o: go to the other frame
+\end{itemize}
+\subsection{link}
+\label{sec:org30bdcf6}
+\begin{itemize}
+\item c-c l: capture link
+\item c-c c-l: insert link
+\item c-c c-o: open the link
+\end{itemize}
+\subsection{functions}
+\label{sec:org8f81705}
+\begin{itemize}
+\item use scratch to run code temperal
+\item c-h k: show the function of a key(m-x describe-key)
+\item c-h f: (m-x describe-function)
+\item comment or uncomment
+\item comment box
+\item read pdf and make note:
+\item IRC
+\end{itemize}
+\subsection{lisp}
+\label{sec:org164dbee}
+\subsection{eshell}
+\label{sec:orga5f4467}
+\begin{itemize}
+\item \url{https://www.masteringemacs.org/article/complete-guide-mastering-eshell}
+\end{itemize}
+\subsection{help}
+\label{sec:orgeb827f9}
+\begin{itemize}
+\item 
+\end{itemize}
+\subsection{extensions and modes}
+\label{sec:org2bdbc28}
+\begin{itemize}
+\item find the source codes in \textasciitilde{}/.emacs.d/elpa/
+\end{itemize}
+\subsubsection{installation list}
+\label{sec:org0d464b6}
+\begin{itemize}
+\item helm
+\item company
+\item magit
+\item electric pair mode
+\item show paren mode
+\item smartparen mode
+\item doom-theses
+\item doom-modelines
+\item scratch
+\item magic-latex-buffer
+\item beacon
+\item ivy/counsel/swiper
+\end{itemize}
+\subsubsection{melpa}
+\label{sec:orgb63df30}
+\begin{itemize}
+\item \url{https://blog.csdn.net/sjhuangx/article/details/51252522}
+\item update: M-x package-refresh-contents
+\end{itemize}
+\subsubsection{configuration:}
+\label{sec:org3c8a3b5}
+\begin{itemize}
+\item \url{https://www.cnblogs.com/morole/p/9965685.html}
+\item \url{https://github.com/munen/emacs.d} (very good configuration example)
+\item installed parts of extension recommanded by him
+\end{itemize}
+\subsubsection{hook}
+\label{sec:orgf141269}
+\subsubsection{helm}
+\label{sec:org8492d50}
+\subsubsection{Magit}
+\label{sec:org4f2da51}
+\begin{itemize}
+\item c-x g: open Magit
+\item s: stage files
+\item c c: commit and make comment
+\item c-c c-c: complete commit
+\item P u: push to the remote orgin
+\end{itemize}
+\subsubsection{company}
+\label{sec:org7fa2e00}
+\subsubsection{yas-snippet}
+\label{sec:orgbeef690}
+\subsubsection{py-autopep8: \url{https://github.com/paetzke/py-autopep8.el}}
+\label{sec:org58e0562}
+\subsubsection{linum(show line numbers):}
+\label{sec:org751305c}
+\begin{itemize}
+\item \url{http://ergoemacs.org/emacs/emacs\_line\_number\_mode.html}
+\end{itemize}
+\subsubsection{ein: run jupyter notebook in emacs}
+\label{sec:org942c92c}
+\begin{itemize}
+\item ein:jupyter-server-start
+\item ein:stop
+\item C-u-c-b/a: add markdown
+\end{itemize}
+\begin{enumerate}
+\item auto-complete
+\label{sec:orgfc1fe34}
+o(add-hook 'ein:notebook-mode-hook \#'anaconda-mode)
+
+(defun user-ein-reply-callback (args content -metadata-not-used-)
+  (let ((callback (plist-get args :callback))
+        (candidates (plist-get content :matches)))
+    (funcall callback candidates)))
+
+(defun user-company-ein-callback (callback)
+  (ein:kernel-complete
+   (ein:get-kernel)
+   (thing-at-point 'line)
+   (current-column)
+   (list :complete\(_{\text{reply}}\)
+         (cons \#'user-ein-reply-callback (list :callback callback))))
+  )
+
+(defun user-company-ein-backend (command \&optional arg \&rest ignored)
+  (interactive (list 'interactive))
+  (case command
+    (interactive (company-begin-backend 'user-company-ein-backend))
+    (prefix (company-anaconda-prefix))
+    (candidates (cons :async \#'user-company-ein-callback))
+    (location nil)
+    (sorted t)
+    )
+  )
+\end{enumerate}
+
+\subsubsection{evil}
+\label{sec:org21b883b}
+\subsubsection{elpy}
+\label{sec:org432f3a5}
+\subsubsection{flycheck}
+\label{sec:org2009ceb}
+\subsubsection{sphinx-doc: \url{https://github.com/naiquevin/sphinx-doc.el}}
+\label{sec:org8e6ca7b}
+\subsubsection{counsel}
+\label{sec:org01c34ff}
+\subsubsection{browse and tag code: \url{https://zhuanlan.zhihu.com/p/67312736}}
+\label{sec:org381f439}
+
+\subsubsection{ivy}
+\label{sec:org377499e}
+\subsubsection{GNU global}
+\label{sec:org8117b66}
+\subsubsection{ggtags: \url{https://github.com/leoliu/ggtags}}
+\label{sec:org053109d}
+\subsubsection{ctags?}
+\label{sec:orgaa67e35}
+\subsubsection{grep?}
+\label{sec:orgec23ac5}
+\subsubsection{Speedbar: browse source tree}
+\label{sec:org5c96d04}
+\begin{itemize}
+\item SPC: open the children of a node
+\item RET: open the node
+\item U: go up parent directory
+\item n or p: move to next or previous node
+\item m-p or m-p: move to next or previous node at the current level
+\item b: switch to buffer list using Speedbar presentation
+\item f: switch back to file list
+\end{itemize}
+\subsubsection{sr-speedbar}
+\label{sec:org2658046}
+\subsubsection{pyim: \url{https://github.com/tumashu/pyim}}
+\label{sec:org3f7a57f}
+\subsubsection{projectile}
+\label{sec:org0278126}
+\begin{itemize}
+\item \url{https://github.com/bbatsov/projectile}
+\item \url{https://projectile.readthedocs.io/en/latest/usage/}: usage
+\end{itemize}
+\subsubsection{org mode}
+\label{sec:org45d6736}
+\begin{itemize}
+\item c-c c-x c-l: show equation
+\item c-c c-c: hide equation
+\item c-c c-e l l: Export as \LaTeX{} file myfile.tex
+\item C-c C-e l p: Export as \LaTeX{} and then process to PDF
+\item C-c C-e l o: Export as \LaTeX{} and then process to PDF, then open the resulting PDF file
+\end{itemize}
+\subsubsection{python mode}
+\label{sec:org771dcc3}
+\begin{itemize}
+\item \url{https://realpython.com/emacs-the-best-python-editor/}
+\item c-c c-p: open process windowm
+\item c-c c-c: run python file
+\item python mode command: \url{https://stackoverflow.com/questions/25669809/how-do-you-run-python-code-using-emacs}
+\item C-c-j jump to def/class
+\item C-c-f find file
+\end{itemize}
+\subsubsection{c/c++ mode}
+\label{sec:orge4f6cb4}
+\begin{itemize}
+\item \url{http://top.jobbole.com/}
+\end{itemize}
+\subsubsection{shell-script mode}
+\label{sec:org2102631}
+\begin{itemize}
+\item c-c c-x execute script
+\end{itemize}
+\subsubsection{javascript mode}
+\label{sec:org207f1fc}
+\subsubsection{tex mode}
+\label{sec:org5507c6e}
+\subsubsection{gnu global and emacs}
+\label{sec:org1b0f87c}
+\begin{itemize}
+\item \url{https://www.cnblogs.com/elvalad/p/4069656.html}
+\item \url{https://www.gnu.org/software/global/download.html}
+\item \url{https://www.cnblogs.com/elvalad/p/4069656.html}
+\item \url{https://blog.csdn.net/gatieme/article/details/78819740}
+\end{itemize}
+\subsubsection{browser}
+\label{sec:org01ffad8}
+\begin{itemize}
+\item \url{https://www.emacswiki.org/emacs/BrowseUrl}
+\end{itemize}
+\subsubsection{miscellaneous}
+\label{sec:org6bdc3e7}
+\subsubsection{theme}
+\label{sec:orgf071d88}
+\subsubsection{latex}
+\label{sec:org1c2ead3}
+1.C-c C-c and choose latex compiler and compile
+2.C-c C-c and choose bibtex to compile the .bib file
+3.compile for another 2 time
+\section{topics2}
+\label{sec:orgf6320a9}
+\subsection{dired(file manager)}
+\label{sec:orga80bc2a}
+\subsection{eshell}
+\label{sec:org3b743d7}
+\subsection{upgrade emacs}
+\label{sec:org319776d}
+\begin{itemize}
+\item sudo add-apt-repository ppa:kelleyk/emacs
+\item sudo apt upgrade
+\item sudo apt install emacs26
+\item sudo apt remove --autoremove emacs26 emacs26-nox
+\end{itemize}
+\subsection{from helm to ivy}
+\label{sec:org4b20588}
+\begin{itemize}
+\item \url{https://sam217pa.github.io/2016/09/13/from-helm-to-ivy/\#fn:2}
+\end{itemize}
+\subsection{read-only-mode}
+\label{sec:orgb306f1d}
+\begin{itemize}
+\item read-only-mode
+\item revert-buffer
+\item 
+\end{itemize}
+\subsection{PDFView}
+\label{sec:org6d85955}
+\begin{itemize}
+\item C-c C-c: view pdf
+\end{itemize}
+\section{people}
+\label{sec:org47eb61c}
+\subsection{Richard Stallman}
+\label{sec:orgf74b140}
+\begin{itemize}
+\item founder of the GNU Project and author of GNU Emacs
+\end{itemize}
+\subsection{manateelazycat(王勇)}
+\label{sec:org8c24e8c}
+\begin{itemize}
+\item \url{https://manateelazycat.github.io/index.html}
+\item 
+\end{itemize}
+\subsection{important hakers}
+\label{sec:orgeb4a7d5}
+\begin{itemize}
+\item \url{https://manateelazycat.github.io/emacs/2019/05/12/emacs-hackers.html}
+\end{itemize}
+\section{centaur emacs}
+\label{sec:org9a4b5a0}
+\begin{itemize}
+\item \url{https://github.com/seagle0128/.emacs.d} (centaur emacs, Vincent Zhang)
+\item init-swiper
+\item wrap
+\item backspace C-;
+\item backup-directory-alist
+\item turn on/off flyspell/flycheck
+\item ansi-term: line mode and character mode
+\item magic-latex
+\item German input
+\item youdao
+\item show-paren-mode
+\item emacs client
+\end{itemize}
+
+python-mode
+\begin{itemize}
+\item auto-pep8//yapf
+\item anaconda, python version
+\item setq and config
+
+\item ?: babel
+\item ?: config read-only mode and hooks
+\item ?: remind the routines in the modules
+\item ?: swiper cursor
+
+\item ?: sphinx-doc
+\item ?: multicusor
+\item ?: auto-complete
+\item ?: projectile
+\item ?: python functionality
+\item ?: ein mode: can't open ipynb
+\item ?: anaconda-mode
+\item 
+
+
+\item ?: sogou Chinese input
+\item ?: org-mode latex preview
+\item ?: font size
+\end{itemize}
+
+\section{how to debug in emacs?}
+\label{sec:org113c09a}
+\begin{itemize}
+\item scratch
+\item message
+\item rgrep key words
+\item find the function definations
+\end{itemize}
+[must read the docs and comments carefully]
+\begin{itemize}
+\item ask yilun
+\item ask the author
+
+\item comment certain packages and see the difference
+\end{itemize}
+\end{document}

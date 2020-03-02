@@ -41,6 +41,13 @@ Linux note
 - cmake
 - resource
 - anaconda environment problems
+** 02/2020
+02/29
+- installed wps
+- xrandr brightness
+- 
+
+
 * problems
 - slack sogou input; 
 - slack Chinese
@@ -256,9 +263,12 @@ https://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell
        This is frequently used by programmers who need only send their program alterations and not the entire source code.
        -q Only reports whether the two given files differ
 
-** grep and sed
-- https://www.cnblogs.com/flyor/p/6411140.html
-- https://blog.csdn.net/xclshwd/article/details/88283447
+
+** find
+
+
+find 
+https://opensource.com/article/18/4/how-use-find-linux
 ** ps(process status)
 - https://www.cnblogs.com/shujuxiong/p/8983103.html
 ** File Systems
@@ -303,9 +313,99 @@ https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
 - c-s-n: open a new terminal
 
 * topics3
+** grep, sed and awk
+*** comparison
+
+sed、grep和awk之间的区别
+https://blog.csdn.net/weixin_42193400/article/details/82255541
+
+linux 三剑客命令(grep,sed ,awk)
+https://blog.csdn.net/liushengxi_root/article/details/72810319
+
+grep和sed
+https://www.cnblogs.com/liu247/p/11021789.html
+
+grep
+https://www.cnblogs.com/flyor/p/6411140.html
+https://blog.csdn.net/xclshwd/article/details/88283447
+
+sed 
+https://www.cnblogs.com/ftl1012/p/sed.html
+
+awk
+
+*** grep
+for searching
+- -n line number
+- 
+
+*** sed
+bashed on https://www.cnblogs.com/ftl1012/p/sed.html : linux sed 命令详解, 个别命令有笔误，见下面总结或截图内容
+for substituting, deleting, adding, fetching(以行为单位进行处理)
+
+outside ''
+- -n 取消默认的完整输出，只要需要的, 因为sed默认会完整输出文本内容
+- -e 允许多项编辑
+- -i 修改文件内容（如果不加，并不修改文件本身, 针对源文件
+
+inside ''
+- d delete, p print, a add
+- s 用一个字符串替换另一个，g 在行内进行全局替换
+- i\ 在当前行之前插入文本。多行时除最后一行外，每行末尾需用"\"续行
+- & 上次匹配的结果
+- , to 
+- = show line number
+
+f means file_name, f is in ~/miscellaneous/test
+
+- sed -n '3p' f
+- sed -n '2,4p' file_name: print line 2 to 4
+- sed -n '2,4d' file_name: delete line 2 to 4
+- sed '2a hello world' file_name: add 'hello world' below line2
+- sed -n '/root/p' f: filter 'root' and print
+
+- sed -n '//hhh//, /omc/p' f: from hhh to omc, print
+- sed -n -e '1,5p' -e '1,5=' f: print line 1 to 5 and print line number
+- sed -n '/root/=' f: show the line number with the filtered string
+- sed -n -e '/root/p' -e '/root/=' f: 
+
+- sed -i 's/root/world/d f: use 'root' to substitute with 'world'
+- sed -n '$p' f: print last line
+- sed -e '1i happy' -e '$a new year' f: 只是显示界面，不修改文件
+- sed -i -e '1i happy' -e '$a new year' f
+
+- sed '1,4i hahaha' f: add 'hahaha' after each line between line 1 to 4
+- sed 's/root/hello_&/g' f
+- sed '3,9d' f: delete line 3 to 9
+- sed '/hhh/,/omc/d' f: delete line with 'hhh' to line with 'omc' (the first 'hhh' to the last 'omc')
+- sed '/omc,10d' f: delete line with /omc to line 10
+备注：范围可以用数字、正则表达式、或二者的组合表示
+
+- sed -e '1,5d' -e '=' -e 's/reboot/shutdown/g'  f
+- sed -n -e '3,6p' -e 's/reboot/shutdown/g' f
+
+文件之间的编辑, filter is for f
+- sed '/root/ r f1' f: filter 'root' in f, and read in f1 below filtered line, 仅显示
+- sed '/root/ w f1' f: filter 'root' in f, and write in f1 with filtered line，真实写入, f1中原数据被覆盖
+
+配合find使用
+
+*** awk
+*** find
+find . -name "*.txt" 
 ** find 
 - https://opensource.com/article/18/4/how-use-find-linux
-- 
+  - 
+** regular expression
+- https://www.zhihu.com/question/48219401/answer/742444326
+- https://www.zhihu.com/topic/19577832/top-answers
+
+- w[ea]ll: well or wall
+- w[^e]ll: w.ll but not well
+- ^the: start with the 
+- goo..le: goo(any singel)(any single)le
+- g*g: g(any any)g
+- ty\{2,3\}: tyy and tyyy, \ is a escape character(转义字符) 
 ** cmake
 - https://www.cnblogs.com/cv-pr/p/6206921.html build a cmake project
 * shell script
@@ -324,9 +424,8 @@ https://docs.nersc.gov/programming/high-level-environments/python/
 - yilun gave
 https://edgeofmistery.wordpress.com/2019/03/16/nersc-jupyterhub-use-the-same-environment-as-bash/
 * material
-* regular expression
-- https://www.zhihu.com/question/48219401/answer/742444326
-- https://www.zhihu.com/topic/19577832/top-answers
+
+
 * hardwares
 - diode 二极管
 - triode 三极管
@@ -378,6 +477,9 @@ https://edgeofmistery.wordpress.com/2019/03/16/nersc-jupyterhub-use-the-same-env
 - tmux
 - insync/google drive
 - xclip
+- wps
+** installation recommendation
+https://zhuanlan.zhihu.com/p/90227781
 ** conda/anaconda
 *** install anaconda:
 - wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh
@@ -487,6 +589,17 @@ https://github.com/sharkdp/fd
   1. $nm #and press TAB key twice (to check the default network manager
   2. if there is nm-applet, in dmenu, type nm-applet
   3. https://cialu.net/manage-wi-fi-connections-i3wm/
+*** brightness
+https://unix.stackexchange.com/questions/526653/control-screen-brightness-in-i3
+xrandr -q | grep 'connected'|head -n 1|cut -d ' ' -f1 
+- return all the connected screens, like ePD-1
+
+xrandr --output eDP-1 --brightness 0.3
+- set the brightness to be 30%
+
+
+
+
 ** ranger(filemanager)
 - https://github.com/ranger/ranger
   -  
@@ -550,6 +663,10 @@ Download/repositories
 ** xclip
 eg. ls | xclip
 and type C-; to go to the clipboard
+** wps 
+https://www.wps.cn/product/wpslinux#
+- sudo dpkg -i ~/path_to/wps-office_11.1.0.9126_amd64.deb 
+- fonts?
 * linux scratch
 - http://www.linuxfromscratch.org
 - LFS, read online, stable lfs, tried gcc
@@ -557,8 +674,4 @@ and type C-; to go to the clipboard
 - 
 * resource
 - https://zhuanlan.zhihu.com/p/36801617
-* my summary
-- find 
-https://opensource.com/article/18/4/how-use-find-linux
-- grep 
 

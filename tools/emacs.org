@@ -67,6 +67,12 @@ Emacs note
 ** 02/2020
 02/15
 - PDFView
+
+02/29
+- changed centaur-theme to be "default" in custom.el
+- commented out "circe"
+
+
 * topics1
 ** keys
 - https://www.emacswiki.org/emacs/EmacsNewbieKeyReference
