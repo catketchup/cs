@@ -1,1 +1,22 @@
-#+STRARTUP:indent
+#+STARTUP:indent
+Yilun: https://edgeofmistery.wordpress.com/
+
+* questions
+: Then what is .rtx?
+: the functionalities of a class or a package
+: What is the format of calling in a package and a class? [] and {}
+: debug tex file in emacs
+
+* pacakage
+- kpsewhich pacakge_name.sty
+path of a specific latex package
+eg. kpsewhich float.sty, usually in //usr/share/texlive/texmf-dist/tex/latex//
+
+
+* .sty, .cls, .rtx
+.cls is for "classes"
+.sty is for "packages" or "style files"
+
+
+
+

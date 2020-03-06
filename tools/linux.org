@@ -47,7 +47,9 @@ Linux note
 - xrandr brightness
 - 
 
-
+** 03/2020
+03/02
+- sed, regular expression
 * problems
 - slack sogou input; 
 - slack Chinese
@@ -263,7 +265,6 @@ https://www.howtogeek.com/howto/ubuntu/keyboard-shortcuts-for-bash-command-shell
        This is frequently used by programmers who need only send their program alterations and not the entire source code.
        -q Only reports whether the two given files differ
 
-
 ** find
 
 
@@ -391,11 +392,11 @@ f means file_name, f is in ~/miscellaneous/test
 配合find使用
 
 *** awk
-*** find
-find . -name "*.txt" 
 ** find 
 - https://opensource.com/article/18/4/how-use-find-linux
-  - 
+find . -name "*.txt" 
+find . -type d -name 'dir_name'
+find . -type f -name 'file_name' 
 ** regular expression
 - https://www.zhihu.com/question/48219401/answer/742444326
 - https://www.zhihu.com/topic/19577832/top-answers
@@ -408,6 +409,10 @@ find . -name "*.txt"
 - ty\{2,3\}: tyy and tyyy, \ is a escape character(转义字符) 
 ** cmake
 - https://www.cnblogs.com/cv-pr/p/6206921.html build a cmake project
+** GNU linux
+https://www.zhihu.com/question/374271861 : Linux 为什么又称为 GNU/Linux？
+http://www.gnu.org/gnu/linux-and-gnu.zh-cn.html : Linux and GNU system(official, by Richard Stallman)
+Linux is a kernel
 * shell script
 - http://www.runoob.com/linux/linux-shell.html
 - 至shell数组

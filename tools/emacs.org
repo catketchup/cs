@@ -72,7 +72,6 @@ Emacs note
 - changed centaur-theme to be "default" in custom.el
 - commented out "circe"
 
-
 * topics1
 ** keys
 - https://www.emacswiki.org/emacs/EmacsNewbieKeyReference
@@ -107,6 +106,8 @@ Emacs note
 - c-/: undo
 - c-s: search
 - c-e: export
+- select multi lines C-u 8 C-x Tab: indent the reigion by 8 spaces
+- C-{: iedit-mode, multicusor and edit
 ** buffer
 - c-x b: go to a buffer
 - c-x k: kill the buffer
@@ -179,6 +180,7 @@ Emacs note
 - ein:jupyter-server-start
 - ein:stop
 - C-u-c-b/a: add markdown
+- ? plots don't pop up
 **** auto-complete
 o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 
@@ -232,12 +234,15 @@ o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 *** projectile
 - https://github.com/bbatsov/projectile
 - https://projectile.readthedocs.io/en/latest/usage/: usage
-*** org mode
-- c-c c-x c-l: show equation
+*** org-latex-fragment
+- c-c c-x c-l: show equation, toggle tex fragment
 - c-c c-c: hide equation
 - c-c c-e l l: Export as LaTeX file myfile.tex
 - C-c C-e l p: Export as LaTeX and then process to PDF
 - C-c C-e l o: Export as LaTeX and then process to PDF, then open the resulting PDF file
+- C-c C-c: run python block in org
+- [[file_name]]: with [[, C-c C-x C-v: org-toggle-inline-images 
+
 *** python mode
 - https://realpython.com/emacs-the-best-python-editor/
 - c-c c-p: open process windowm
@@ -268,6 +273,7 @@ o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 ** dired(file manager)
 ** eshell
 ** upgrade emacs
+- sudo apt remove --autoremove emacs26 emacs26-nox: remove emacs
 - sudo add-apt-repository ppa:kelleyk/emacs
 - sudo apt upgrade
 - sudo apt install emacs26
@@ -280,7 +286,11 @@ o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 - 
 ** PDFView
 - C-c C-c: view pdf
+** sogou input
+export LC_CTYPE=zh_CN.UTF-8
+export PATH="/home/ketchup/tools/anaconda3/bin:$PATH"
 * people
+** Linus Torvalds
 ** Richard Stallman
 - founder of the GNU Project and author of GNU Emacs
 ** manateelazycat(王勇)
@@ -288,6 +298,7 @@ o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 - 
 ** important hakers
 - https://manateelazycat.github.io/emacs/2019/05/12/emacs-hackers.html
+
 * centaur emacs
 - https://github.com/seagle0128/.emacs.d (centaur emacs, Vincent Zhang)
 - init-swiper
