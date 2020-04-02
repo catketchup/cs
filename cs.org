@@ -70,5 +70,8 @@ chapter 10. elementary data structures
 - hack and react(facebook back-end and front-end, can ask from Hezi Zhang)
 * mathmatica
 - 
+* tensorflow 
+- official website
+https://tensorflow.google.cn/
 * people
 - https://manateelazycat.github.io/opensource/business/2017/12/11/straight-to-the-heart.html

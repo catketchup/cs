@@ -250,7 +250,13 @@ o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 - python mode command: https://stackoverflow.com/questions/25669809/how-do-you-run-python-code-using-emacs
 - C-c-j jump to def/class
 - C-c-f find file
+*** elpy mode(python)
+C-c C-d: go to docstring
+M-.: navigate to defination
+C-c C-z: navigate to Ipython
+C-c C-f: elpy find files
 *** c/c++ mode
+
 - http://top.jobbole.com/
 *** shell-script mode
 - c-c c-x execute script
@@ -296,6 +302,7 @@ export PATH="/home/ketchup/tools/anaconda3/bin:$PATH"
 ** manateelazycat(王勇)
 - https://manateelazycat.github.io/index.html
 - 
+** Vincent Zhang
 ** important hakers
 - https://manateelazycat.github.io/emacs/2019/05/12/emacs-hackers.html
 
@@ -336,6 +343,13 @@ python-mode
 - ?: org-mode latex preview
 - ?: font size
 
+* EAF 
+emacs-application-framework
+by manateelazycat(王勇)
+https://github.com/manateelazycat/emacs-application-framework
+
+-? eaf-open-browser doesn't work
+-? default pdf viewer, color, highlight
 * how to debug in emacs?
 - scratch
 - message

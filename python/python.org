@@ -31,6 +31,7 @@
 - pip list
 - https://zhidao.baidu.com/question/1823287441402688028.html
 **** numpy
+- numpy.ndarray source code: https://stackoverflow.com/questions/16682672/how-do-i-read-numpy-source
 **** pandas
 **** matplotlib
 **** tensorflow
@@ -51,6 +52,7 @@
 - https://micropyramid.com/blog/understand-self-and-__init__-method-in-python-class/
 - __init__.py file
 - about 'object': https://blog.csdn.net/deeposcar/article/details/80947155, there is no difference in python3 
+- def __new__():
 ** *args and **kwargs
 - https://www.geeksforgeeks.org/args-kwargs-python/
 - https://stackoverflow.com/questions/682504/what-is-a-clean-pythonic-way-to-have-multiple-constructors-in-python
@@ -79,9 +81,6 @@
 - https://blog.csdn.net/mr_791063894/article/details/85105838
 - https://blog.51cto.com/853056088/2089084
 - __file__
-** parallel 
-**** pypar
-- example: https://github.com/dhanson/quicklens/blob/master/quicklens/mpi.py
 ** __init__.py
 - package is a collection of modules
 - package and subpackge
@@ -89,6 +88,7 @@
 - lambda function
 - test: https://blog.csdn.net/yucicheung/article/details/79445350
 
+** parser
 * topics 2
 ** set python path
 in .bashrc
@@ -148,3 +148,35 @@ transpose arrays and swapping axes
 - Guido van Rossum
 * MPI for python
 - https://mpi4py.readthedocs.io/en/stable/
+* bugs
+** SyntaxError: non-default argument follows default argument
+- https://stackoverflow.com/questions/24719368/syntaxerror-non-default-argument-follows-default-argument/39942121
+the order of defining arguments
+** RuntimeWarning: overflow encountered in multiply
+- 
+** warnings
+import warnings
+warnings.filterwarnings('ignore')
+* data type
+type()
+** Numeric
+- integer
+- float
+- complex
+** Boolean
+** Sequence Type
+- string
+- list
+- tuple
+
+** Dictionary
+* web crawler
+- https://blog.csdn.net/qq_41396296/article/details/81100158 十个Python爬虫武器库示例，十个爬虫框架，十种实现爬虫的方法！
+- https://zhuanlan.zhihu.com/p/76994986 python爬虫常用库
+- bs4
+* parallel
+** pypar
+- example: https://github.com/dhanson/quicklens/blob/master/quicklens/mpi.py
+* cheat sheat
+- 一张让你代码能力突飞猛进的速查表
+https://zhuanlan.zhihu.com/p/61013882

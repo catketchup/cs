@@ -99,9 +99,10 @@ Linux note
 ** crontab
 - 
 * topics1
-** remove apt
+** sudo apt
 - dpkg --list
 - sudo apt-get remove "package-name"
+- sudo apt install path+file: for intalling .deb files
 ** permissions
 - http://linuxcommand.org/lc3_lts0090.php
 - https://www.cnblogs.com/webnote/p/5734714.html
@@ -530,6 +531,13 @@ alias resetkb="setxkbmap -layout us" (reset)
 - cvim
 - new tab redirect
 - stayfocused
+*** upgrade
+https://tecadmin.net/install-google-chrome-in-ubuntu/
+- wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+- sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+- sudo apt-get update
+- sudo apt-get install google-chrome-stable
+
 ** ANNZ
 - https://github.com/IftachSadeh/ANNZ
 - https://github.com/IftachSadeh/ANNZ/issues/3
@@ -604,7 +612,9 @@ xrandr --output eDP-1 --brightness 0.3
 
 
 
-
+*** polybar
+- https://launchpad.net/~kgilmer/+archive/ubuntu/speed-ricer Ken Gilmer
+- Yilun Guan
 ** ranger(filemanager)
 - https://github.com/ranger/ranger
   -  
@@ -620,21 +630,29 @@ xrandr --output eDP-1 --brightness 0.3
 " basic navigation
 set smoothscroll
 let hintcharacters = "asdfghjklvn"
-
 " mapping of frequent used websites
+let @@amazon = 'https://www.amazon.com/'
 let @@arxiv = 'https://arxiv.org/'
 let @@baidu = 'http://www.baidu.com/'
 let @@bilibili = 'http://www.bilibili.com/'
+let @@emacschina = 'https://emacs-china.org'
 let @@github = 'http://www.github.com/'
 let @@google = 'http://www.google.com/'
 let @@mypitt = 'http://my.pitt.edu/'
-
+let @@weibo = 'http://www.weibo.com/'
+let @@zhihu = 'http://www.zhihu.com/'
+let @@xkcd = 'https://xkcd.com/'
+map am :tabnew @@amazon<CR>
 map Ar :tabnew @@arxiv<CR>
 map ba :tabnew @@baidu<CR>
 map bi :tabnew @@bilibili<CR>
+map em :tabnew @@emacschina<CR>
 map gi :tabnew @@github<CR>
 map go :tabnew @@google<CR>
 map my :tabnew @@mypitt<CR>
+map weib :tabnew @@weibo<CR>
+map xk :tabnew @@xkcd<CR>
+map zh :tabnew @@zhihu<CR>
 ** cmake
 - https://askubuntu.com/questions/829310/how-to-upgrade-cmake-in-ubuntu
 ** tmux
@@ -679,4 +697,8 @@ https://www.wps.cn/product/wpslinux#
 - 
 * resource
 - https://zhuanlan.zhihu.com/p/36801617
-
+- 
+* sources
+- https://launchpad.net/~kgilmer/+archive/ubuntu/speed-ricer Ken Gilmer
+- what is ppa? 
+- launchpad: a software collaboration platform 
