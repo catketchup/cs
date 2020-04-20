@@ -2,7 +2,6 @@
 c/c++ note
 * c
 * c++
-
 * people
 - Ken Thompson
 - Dennis Ritchie

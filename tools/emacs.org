@@ -158,6 +158,7 @@ Emacs note
 - ivy/counsel/swiper
 *** melpa
 - https://blog.csdn.net/sjhuangx/article/details/51252522
+- package-initialize
 - update: M-x package-refresh-contents
 *** configuration: 
 - https://www.cnblogs.com/morole/p/9965685.html
@@ -180,7 +181,9 @@ Emacs note
 - ein:jupyter-server-start
 - ein:stop
 - C-u-c-b/a: add markdown
-- ? plots don't pop up
+**** images don't pop up
+M-x customize-group RET ein
+Ein:Output Area Inlined Images
 **** auto-complete
 o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 
@@ -234,15 +237,6 @@ o(add-hook 'ein:notebook-mode-hook #'anaconda-mode)
 *** projectile
 - https://github.com/bbatsov/projectile
 - https://projectile.readthedocs.io/en/latest/usage/: usage
-*** org-latex-fragment
-- c-c c-x c-l: show equation, toggle tex fragment
-- c-c c-c: hide equation
-- c-c c-e l l: Export as LaTeX file myfile.tex
-- C-c C-e l p: Export as LaTeX and then process to PDF
-- C-c C-e l o: Export as LaTeX and then process to PDF, then open the resulting PDF file
-- C-c C-c: run python block in org
-- [[file_name]]: with [[, C-c C-x C-v: org-toggle-inline-images 
-
 *** python mode
 - https://realpython.com/emacs-the-best-python-editor/
 - c-c c-p: open process windowm
@@ -256,8 +250,45 @@ M-.: navigate to defination
 C-c C-z: navigate to Ipython
 C-c C-f: elpy find files
 *** c/c++ mode
+cc mode
+c++ mode https://www.emacswiki.org/emacs/CPlusPlusMode
+https://tuhdo.github.io/c-ide.html configuration tutorial, very comprehensive
+https://emacs.stackexchange.com/questions/801/how-to-get-intelligent-auto-completion-in-c auto-completion
+**** GUN GLOBAL
+**** helm-gtags
+https://github.com/emacsorphanage/helm-gtags
+helm-gtags.el is GNU Global helm interface
+should install helm and GMU Global at first
+generate ctags 
+**** ggtags
+https://github.com/leoliu/ggtags
+Emacs frontend to GNU Global source code tagging system
 
-- http://top.jobbole.com/
+**** ctags, etags, gtags
+http://xahlee.info/comp/ctags_etags_gtags.html
+ctags is a shell command. Run it to create a index file, then you can use command to quickly jump to a identifier (function)'s definition. 
+
+using grep is much slower
+
+variations: ctags, etags, gtags(GNU Global)
+- ctags: classic tool
+- etags: from emacs
+- gtags: GNU Global from GNU, with command name gtags and global
+use man ... to check them
+
+gtags
+- gtags: generate index file
+- global: locate identifiers
+
+**** clang-format and clang-format+
+**** irony 
+https://github.com/Sarcasm/irony-mode
+**** company-irony
+**** company-c-headers
+**** company-irony-c-headers
+https://github.com/hotpxl/company-irony-c-headers
+It must be loaded after irony-mode, while the backend should be grouped with company-irony, and before it.
+Put the following code in your initialization script:
 *** shell-script mode
 - c-c c-x execute script
 *** javascript mode
@@ -275,6 +306,20 @@ C-c C-f: elpy find files
 1.C-c C-c and choose latex compiler and compile
 2.C-c C-c and choose bibtex to compile the .bib file
 3.compile for another 2 time
+* org mode
+** org-latex-fragment
+- c-c c-x c-l: show equation, toggle tex fragment
+- c-c c-c: hide equation
+- c-c c-e l l: Export as LaTeX file myfile.tex
+- C-c C-e l p: Export as LaTeX and then process to PDF
+- C-c C-e l o: Export as LaTeX and then process to PDF, then open the resulting PDF file
+- C-c C-c: run python block in org
+- [[file_name]]: with [[, C-c C-x C-v: org-toggle-inline-images 
+
+** org html
+https://github.com/guanyilun/snippets Yilun's org template
+https://github.com/gongzhitaao/orgcss template
+https://gongzhitaao.org/orgcss/ template
 * topics2
 ** dired(file manager)
 ** eshell
@@ -295,6 +340,16 @@ C-c C-f: elpy find files
 ** sogou input
 export LC_CTYPE=zh_CN.UTF-8
 export PATH="/home/ketchup/tools/anaconda3/bin:$PATH"
+** German input 
+*** german-postfix
+| ae  -> ä
+| aee -> ae
+| oe  -> ö
+| oee -> oe
+| ue  -> ü (not after a/e/q)
+| uee -> ue
+| sz  -> ß
+| szz -> sz
 * people
 ** Linus Torvalds
 ** Richard Stallman
@@ -360,3 +415,9 @@ https://github.com/manateelazycat/emacs-application-framework
 - ask the author
 
 - comment certain packages and see the difference
+* people's configuration
+https://github.com/purcell/emacs.d Steve Purcell(purcell)
+https://github.com/munen/emacs.d Alain M. Lafon(munen)
+https://github.com/seagle0128/.emacs.d Vincent Zhang(seagle0128)
+* lisp
+https://www.gnu.org/software/emacs/manual/html_node/elisp/ emacs lisp

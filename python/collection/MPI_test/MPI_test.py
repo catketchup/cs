@@ -1,4 +1,16 @@
 from mpi4py import MPI
+import sys
+import time
+
+size = MPI.COMM_WORLD.Get_size()
+rank = MPI.COMM_WORLD.Get_rank()
+name = MPI.Get_processor_name()
+
+sys.stdout.write("Hello, World! I am process %d of %d on %s.\n" %
+                 (rank, size, name))
+time.sleep(300)
+
+from mpi4py import MPI
 import numpy as np
 from orphics import stats
 # example: https://docs.scipy.org/doc/numpy/reference/generated/numpy.array_split.html
@@ -27,3 +39,4 @@ def fun_mpi(rank):
 
 
 fun_mpi(rank)
+© 2020 GitHub, Inc.

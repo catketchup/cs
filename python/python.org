@@ -148,6 +148,7 @@ transpose arrays and swapping axes
 - Guido van Rossum
 * MPI for python
 - https://mpi4py.readthedocs.io/en/stable/
+mpirun -n 4 python script.py
 * bugs
 ** SyntaxError: non-default argument follows default argument
 - https://stackoverflow.com/questions/24719368/syntaxerror-non-default-argument-follows-default-argument/39942121

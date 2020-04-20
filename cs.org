@@ -75,3 +75,9 @@ chapter 10. elementary data structures
 https://tensorflow.google.cn/
 * people
 - https://manateelazycat.github.io/opensource/business/2017/12/11/straight-to-the-heart.html
+* Web
+- html, css, js
+- web server: https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server
+- https://blog.csdn.net/weixin_43249821/article/details/85276190 如何制作一个HTML网页
+* Cython 
+https://www.youtube.com/watch?v=kFLg5jw2esE a tutorial recommanded by Yilun

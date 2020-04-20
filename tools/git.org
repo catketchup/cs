@@ -61,7 +61,6 @@ bug branch
 - "unrelated history": git pull --allow-unrelated-histories
 
 ** rebase
-
 * large file
 * git
 ** push without username and password

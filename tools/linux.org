@@ -484,6 +484,7 @@ https://edgeofmistery.wordpress.com/2019/03/16/nersc-jupyterhub-use-the-same-env
 - insync/google drive
 - xclip
 - wps
+- flameshot(use 'flameshot gui' to start)
 ** installation recommendation
 https://zhuanlan.zhihu.com/p/90227781
 ** conda/anaconda
