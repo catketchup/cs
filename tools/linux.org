@@ -431,7 +431,6 @@ https://docs.nersc.gov/programming/high-level-environments/python/
 https://edgeofmistery.wordpress.com/2019/03/16/nersc-jupyterhub-use-the-same-environment-as-bash/
 * material
 
-
 * hardwares
 - diode 二极管
 - triode 三极管
@@ -448,6 +447,7 @@ https://edgeofmistery.wordpress.com/2019/03/16/nersc-jupyterhub-use-the-same-env
 - make
 - chrome
 - anaconda
+- sogou
 - vim 
 - emacs
 - xmodmap
@@ -512,6 +512,8 @@ remove env: - conda env remove -n ENV_NAME
 - jt -t <name of the theme>
 - jt -r #reverting to original theme
 *** extensions 
+** sogou
+https://blog.csdn.net/lupengCSDN/article/details/80279177
 ** xmodmap(keyboard configuration)
 - https://askubuntu.com/questions/120928/what-is-the-mod4d-shortcut-key 
 - https://www.cnblogs.com/yinheyi/p/10146900.html (linux keycode)
@@ -691,6 +693,8 @@ and type C-; to go to the clipboard
 https://www.wps.cn/product/wpslinux#
 - sudo dpkg -i ~/path_to/wps-office_11.1.0.9126_amd64.deb 
 - fonts?
+** gscan2pdf
+convert images to pdf
 * linux scratch
 - http://www.linuxfromscratch.org
 - LFS, read online, stable lfs, tried gcc

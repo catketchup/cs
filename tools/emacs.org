@@ -106,7 +106,7 @@ Emacs note
 - c-/: undo
 - c-s: search
 - c-e: export
-- select multi lines C-u 8 C-x Tab: indent the reigion by 8 spaces
+- select multi lines C-u 8 C-x Tab: indent the reigion by 8 spaces, -8 for indent backward
 - C-{: iedit-mode, multicusor and edit
 ** buffer
 - c-x b: go to a buffer
@@ -255,6 +255,10 @@ c++ mode https://www.emacswiki.org/emacs/CPlusPlusMode
 https://tuhdo.github.io/c-ide.html configuration tutorial, very comprehensive
 https://emacs.stackexchange.com/questions/801/how-to-get-intelligent-auto-completion-in-c auto-completion
 **** GUN GLOBAL
+global to generate tag, rtag and path files
+**** tag and rtag
+tag for the working directory 
+rtag for the whole repository
 **** helm-gtags
 https://github.com/emacsorphanage/helm-gtags
 helm-gtags.el is GNU Global helm interface
@@ -305,7 +309,7 @@ Put the following code in your initialization script:
 *** latex
 1.C-c C-c and choose latex compiler and compile
 2.C-c C-c and choose bibtex to compile the .bib file
-3.compile for another 2 time
+3.compile for another 2 times
 * org mode
 ** org-latex-fragment
 - c-c c-x c-l: show equation, toggle tex fragment

@@ -181,3 +181,7 @@ type()
 * cheat sheat
 - 一张让你代码能力突飞猛进的速查表
 https://zhuanlan.zhihu.com/p/61013882
+* serialize and deserialize object?
+- Wei Huo
+* pytorch
+* tensorflow

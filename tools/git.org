@@ -20,9 +20,17 @@ Git note
 - git log 
 - git reset --hard HEAD^: go to the previous version in repository
 - git reset --hard <commit ID>
+- git reset --soft
+hard: lose all uncommited changes
+soft: remove the last commit from current branch, but the changes will stay in your working tree
 - git reflog
 
 - git checkout <file>: checkout to the latest version in repository or checkout from stage to working directory
+
+- git checkout -- .: checkout unstaged files
+- git checkout -- path/to/file/to/revert: For a specific file use:
+- Doesn't work if there are untracked files. Git says error: The following untracked working tree files would be overwritten by checkout: ... ?
+https://stackoverflow.com/questions/52704/how-do-i-discard-unstaged-changes-in-git
 
 ** branch
 create and merge
@@ -61,6 +69,13 @@ bug branch
 - "unrelated history": git pull --allow-unrelated-histories
 
 ** rebase
+** add remote and pull
+git remote add upstream <address>
+git pull upstream <branch name>
+** stash and pull
+git stash
+git pull
+git stash pop
 * large file
 * git
 ** push without username and password

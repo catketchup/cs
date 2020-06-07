@@ -39,4 +39,3 @@ def fun_mpi(rank):
 
 
 fun_mpi(rank)
-© 2020 GitHub, Inc.
