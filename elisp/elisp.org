@@ -1,0 +1,23 @@
+#+STARTUP: indent
+http://ergoemacs.org/emacs/elisp_basics.html
+* What is functional programming
+* What is a global variable?
+- this value is in effect (at least for the moment) throughout the Lisp system
+* can call a global variabel anywhere?
+* What do 'provide' and 'require' really do?
+https://www.gnu.org/software/emacs/manual/html_node/elisp/Named-Features.html
+are an alternative to autoload for loading files automatically
+named features
+
+A feature name is a symbol that stands for a collection of functions, variables, etc. The file that defines them should provide the feature.
+* What is byte-compile?
+* How to understand 'macro' in lisp?
+https://www.gnu.org/software/emacs/manual/html_node/elisp/Macros.html
+Macros enable you to define new control constructs and other language features.
+* defun, defsubst or defmacro?
+* What is .el file called and how to know what functions are there in the .el file?
+features files
+* run elisp in terminal
+http://ergoemacs.org/emacs/elisp_running_script_in_batch_mode.html
+emacs --script filename.el
+

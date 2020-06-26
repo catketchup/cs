@@ -250,10 +250,17 @@ M-.: navigate to defination
 C-c C-z: navigate to Ipython
 C-c C-f: elpy find files
 *** c/c++ mode
+good configuration: https://nilsdeppe.com/posts/emacs-c++-ide2
 cc mode
 c++ mode https://www.emacswiki.org/emacs/CPlusPlusMode
 https://tuhdo.github.io/c-ide.html configuration tutorial, very comprehensive
 https://emacs.stackexchange.com/questions/801/how-to-get-intelligent-auto-completion-in-c auto-completion
+- M-.
+- M-t
+- M-,
+- enable irony mode?
+- enable lsp-mode
+- project-find-file/projectile-find-file
 **** GUN GLOBAL
 global to generate tag, rtag and path files
 **** tag and rtag
@@ -264,6 +271,7 @@ https://github.com/emacsorphanage/helm-gtags
 helm-gtags.el is GNU Global helm interface
 should install helm and GMU Global at first
 generate ctags 
+
 **** ggtags
 https://github.com/leoliu/ggtags
 Emacs frontend to GNU Global source code tagging system
@@ -293,6 +301,7 @@ https://github.com/Sarcasm/irony-mode
 https://github.com/hotpxl/company-irony-c-headers
 It must be loaded after irony-mode, while the backend should be grouped with company-irony, and before it.
 Put the following code in your initialization script:
+*** java mode
 *** shell-script mode
 - c-c c-x execute script
 *** javascript mode
@@ -310,6 +319,8 @@ Put the following code in your initialization script:
 1.C-c C-c and choose latex compiler and compile
 2.C-c C-c and choose bibtex to compile the .bib file
 3.compile for another 2 times
+*** sql mode
+
 * org mode
 ** org-latex-fragment
 - c-c c-x c-l: show equation, toggle tex fragment
@@ -319,7 +330,7 @@ Put the following code in your initialization script:
 - C-c C-e l o: Export as LaTeX and then process to PDF, then open the resulting PDF file
 - C-c C-c: run python block in org
 - [[file_name]]: with [[, C-c C-x C-v: org-toggle-inline-images 
-
+- (setq org-image-actual-width 400) inline image size
 ** org html
 https://github.com/guanyilun/snippets Yilun's org template
 https://github.com/gongzhitaao/orgcss template

@@ -9,8 +9,9 @@ rank = comm.Get_rank()
 data_path = 'output/'
 
 x = np.arange(7.0)
+
 list = np.array_split(x, 4)
-# print(list)
+print(list)
 print("my rank is %d:" % rank)
 
 data = np.array([])

@@ -51,8 +51,6 @@ Linux note
 03/02
 - sed, regular expression
 * problems
-- slack sogou input; 
-- slack Chinese
 - https://www.zhihu.com/question/59227720/answer/163594782: 有哪些命令行的软件堪称神器？
 - tailor shell key bindings
 - .gitignore and .hgignore
@@ -317,9 +315,9 @@ https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners
 * topics3
 ** grep, sed and awk
 *** comparison
-
 sed、grep和awk之间的区别
 https://blog.csdn.net/weixin_42193400/article/details/82255541
+'如果你要处理与文本样式扫描相关的工作，awk应该是你的第一选择'
 
 linux 三剑客命令(grep,sed ,awk)
 https://blog.csdn.net/liushengxi_root/article/details/72810319
@@ -393,11 +391,23 @@ f means file_name, f is in ~/miscellaneous/test
 配合find使用
 
 *** awk
-** find 
+*** head/tail
+print first/last two lines of a file
+head/tail -n 2 file
+*** find 
 - https://opensource.com/article/18/4/how-use-find-linux
 find . -name "*.txt" 
 find . -type d -name 'dir_name'
 find . -type f -name 'file_name' 
+
+*** real examples
+06/10/2020
+tail -n 2 .profile: the last two lines of .profile
+
+06/11/2020
+sed -n '/bl=/p' .bashrc: filter 'bl=' and print it
+
+
 ** regular expression
 - https://www.zhihu.com/question/48219401/answer/742444326
 - https://www.zhihu.com/topic/19577832/top-answers
@@ -414,6 +424,7 @@ find . -type f -name 'file_name'
 https://www.zhihu.com/question/374271861 : Linux 为什么又称为 GNU/Linux？
 http://www.gnu.org/gnu/linux-and-gnu.zh-cn.html : Linux and GNU system(official, by Richard Stallman)
 Linux is a kernel
+
 * shell script
 - http://www.runoob.com/linux/linux-shell.html
 - 至shell数组
@@ -430,7 +441,6 @@ https://docs.nersc.gov/programming/high-level-environments/python/
 - yilun gave
 https://edgeofmistery.wordpress.com/2019/03/16/nersc-jupyterhub-use-the-same-environment-as-bash/
 * material
-
 * hardwares
 - diode 二极管
 - triode 三极管
@@ -695,6 +705,8 @@ https://www.wps.cn/product/wpslinux#
 - fonts?
 ** gscan2pdf
 convert images to pdf
+** sogou
+http://www.xbatu.com/node/251
 * linux scratch
 - http://www.linuxfromscratch.org
 - LFS, read online, stable lfs, tried gcc

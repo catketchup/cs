@@ -1,0 +1,15 @@
+#+STARTUP: indent
+* resources
+zhihu: https://www.zhihu.com/topic/19552067/top-answers
+sql tutorial: https://www.runoob.com/sql/sql-tutorial.html
+mysql tutorial: https://www.runoob.com/mysql/mysql-tutorial.html
+* articles
+- https://mp.weixin.qq.com/s?__biz=MzI2NjA3NTc4Ng==&mid=2652082927&idx=1&sn=9c0554b6e1d24aebb148298398884b6f&chksm=f174990ac603101c4659f740678a816339692041ce539bee6def653b691d7b30b89113a9d38a&mpshare=1&scene=1&srcid=&sharer_sharetime=1592454216406&sharer_shareid=aad93e738b5568be30325bf72748d6c4#rd sql底层；深层次问题。
+
+* mysql
+** installation
+- https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
+** open mysql in terminal
+- mysql -u root -p
+
+* 

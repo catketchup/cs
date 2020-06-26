@@ -5,3 +5,25 @@ c/c++ note
 * people
 - Ken Thompson
 - Dennis Ritchie
+* open source projects
+https://www.youtube.com/watch?v=AWD7eqSuDoc&t=119s, CodeSheep程序羊
+- C, cjson, all pointers, memory
+- C, EZLippi/Tinyhttpd: https://github.com/EZLippi/Tinyhttpd, http server, 进程
+
+- C++, Alinshans/MyTinySTL: https://github.com/Alinshans/MyTinySTL, STL(容器) 标准模板库，functions, template
+- C++, oatpp/oatpp: https://github.com/oatpp/oatpp, web framework, spring(Java)?, web 服务、后端, 传参，json，增删改查，examples
+
+企业级开发
+- C, redis https://redis.io/ 缓存数据库，数据结构存储，几万行，实现缓存，网络，内存管理，磁盘管理，自己造的轮子，写的朴实，https://www.codesheep.cn/2018/08/25/redis-hash-memory-analysis/ redis哈希结构内存，哈希数据结构实现，指针，内存管理，
+- C，nginx https://nginx.org/en/, 互联网公司都会用, 高性能轻量级静态服务器，和动态服务器配合，非阻塞，网路模型，https://www.codesheep.cn/2018/05/25/Nginx%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BC%80%E7%AE%B1%E4%BD%93%E9%AA%8C/ ，代码较多
+* books and materials
+- https://www.youtube.com/watch?v=2Yzq6E6kv-E
+- https://www.zhihu.com/question/22524467 c_cpp books and linux kernel
+* knowledge
+** library location
+- /usr/include/c++
+** compiler
+** gcc and g++
+usually use g++ to complile a c++ file
+- gcc sampleProgram.c -o sampleProgram
+

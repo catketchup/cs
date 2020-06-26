@@ -185,3 +185,9 @@ https://zhuanlan.zhihu.com/p/61013882
 - Wei Huo
 * pytorch
 * tensorflow
+* functional programming, pytoolz
+https://toolz.readthedocs.io/en/latest/index.html
+
+* open source projects
+pytorch: https://github.com/pytorch/pytorch
+tensorflow: https://github.com/tensorflow/models
