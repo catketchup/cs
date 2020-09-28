@@ -1,0 +1,14 @@
+tags:
+    sim_base_dir: '/global/project/projectdirs/sobs/todsims/pipe-s0001/v4'
+    meta_dir:     '/global/project/projectdirs/sobs/todsims/pipe-s0001/v4'
+
+obsfiledb:  '{meta_dir}/obsfiledb.sqlite'
+detdb:      '{meta_dir}/detdb_lat.gz'
+obsdb:      '{meta_dir}/obsdb.gz'
+
+obs_colon_tags: ['band', 'wafer', 'fcode']
+obs_loader_type: 'pipe-s0001'
+
+metadata:
+  - db: '{meta_dir}/focalplane.gz'
+    name: "focal_plane"

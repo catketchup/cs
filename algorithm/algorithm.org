@@ -1,4 +1,7 @@
 #+STARTUP:indent
+* log
+* Books
+** Grokking Algorithms
 * SHA-256
 Secure Hash Algorithm 2
 https://en.wikipedia.org/wiki/SHA-2

@@ -1,0 +1,4 @@
+#+STARTUP: indent
+Vscode note
+* Python environment
+* C/C++ environment

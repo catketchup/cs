@@ -27,3 +27,5 @@ https://www.youtube.com/watch?v=AWD7eqSuDoc&t=119s, CodeSheep程序羊
 usually use g++ to complile a c++ file
 - gcc sampleProgram.c -o sampleProgram
 
+** c compiation process
+https://www.cnblogs.com/CodeWorkerLiMing/p/10701568.html C语言真正的编译过程（4个步骤~~预编译，编译，汇编，连接）

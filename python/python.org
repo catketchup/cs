@@ -189,5 +189,6 @@ https://zhuanlan.zhihu.com/p/61013882
 https://toolz.readthedocs.io/en/latest/index.html
 
 * open source projects
+small projects: https://www.zhihu.com/question/300985609/answer/1293193482
 pytorch: https://github.com/pytorch/pytorch
 tensorflow: https://github.com/tensorflow/models
